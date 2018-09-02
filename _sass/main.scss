@@ -14,13 +14,22 @@ a {
 	}
 }
 
+hr {
+	border-color: rgba($yellow, 0.5);
+	width: 50%;
+	margin: $text-margin auto;
+}
+
+section:nth-child(odd) {
+	background-color: $light-grey;
+}
+
 section:nth-child(even) {
 	background-color: $yellow;
 }
 
 section.parallax {
 	background-color: rgba($yellow, 0.2);
-	/*color: red;*/
 }
 
 section > .container {
@@ -35,7 +44,6 @@ section#about {
 	h1 {
 		font-family: $heading-font-family;
 		font-size: $heading-font-size;
-		margin-bottom: 2.5rem;
 	}
 }
 
@@ -44,9 +52,45 @@ section#about {
 }
 
 .height-page-50 {
-	min-height: 50vh;
+	min-height: 100vh;
 }
 
 #nav-bar {
 	background-color: $brown;
+	.nav-list {
+		position: relative;
+	}
+	a {
+		flex: 0 0 100px;
+		text-align: center;
+	}
+	a.active {
+		/*border-bottom-color: $orange;*/
+		/*transition: .3s ease-in-out;*/
+	}
+	.indicator {
+		width: 100px;
+		bottom: 0;
+		border-bottom: 2px solid $orange;
+		transition: .3s ease-in-out;
+		position: absolute;
+	}
+	a.active:hover {
+		color: $orange
+	}
+	a.active:nth-child(1) ~ .indicator {
+		right: calc(100px * 4);
+	}
+	a.active:nth-child(2) ~ .indicator {
+		right: calc(100px * 3);
+	}
+	a.active:nth-child(3) ~ .indicator {
+		right: calc(100px * 2);
+	}
+	a.active:nth-child(4) ~ .indicator {
+		right: calc(100px * 1)
+;	}
+	a.active:nth-child(5) ~ .indicator {
+		right: 0;
+	}
 }
