@@ -1,2 +1,11 @@
-$text-color:	#252a2a;
-$link-color: 	#d35400;
+$white:				#ffffff;
+$yellow: 			#ffcc00;
+$orange:			#d35400;
+$dark-grey: 		#252a2a;
+
+$text-color:		$dark-grey;
+$link-color: 		$yellow;
+$link-color-hover: 	$orange;
+$link-color-active: $orange;
+
+$section-padding: 	5rem;
