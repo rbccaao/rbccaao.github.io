@@ -1,28 +1,52 @@
 body {
-    color: $text-color;
+	color: $text-color;
+}
+
+p.lead {
+	font-size: $p-lead-font-size;
+	font-weight: $p-lead-font-weight;
 }
 
 a {
-    color: $link-color;
-    &:hover,&:focus, &:active, &.active {
-    	color: $link-color-active;
-    }
+	color: $link-color;
+	&:hover,&:focus, &:active, &.active {
+		color: $link-color-active;
+	}
 }
 
-section:nth-child(odd) {
-    background-color: #ffcc00;
+section:nth-child(even) {
+	background-color: $yellow;
 }
 
 section.parallax {
-    background-color: rgba(255, 204, 0, 0.2);
-    color: $white;
+	background-color: rgba($yellow, 0.2);
+	/*color: red;*/
 }
 
 section > .container {
-    padding-top: $section-padding;
-    padding-bottom: $section-padding;
+	padding-top: $section-padding;
+	padding-bottom: $section-padding;
 }
 
-.container.container-half-page {
-    min-height: 50vh;
+section#about {
+	color: $brown;
+	display: flex;
+	align-items: center;
+	h1 {
+		font-family: $heading-font-family;
+		font-size: $heading-font-size;
+		margin-bottom: 2.5rem;
+	}
+}
+
+.height-page-75 {
+	min-height: 75vh;
+}
+
+.height-page-50 {
+	min-height: 50vh;
+}
+
+#nav-bar {
+	background-color: $brown;
 }

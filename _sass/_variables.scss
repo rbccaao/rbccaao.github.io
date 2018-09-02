@@ -1,11 +1,22 @@
 $white:				#ffffff;
 $yellow: 			#ffcc00;
 $orange:			#d35400;
+$brown:				#382600;
 $dark-grey: 		#252a2a;
 
-$text-color:		$dark-grey;
+
+$text-color:		$brown;
 $link-color: 		$yellow;
 $link-color-hover: 	$orange;
 $link-color-active: $orange;
 
+
 $section-padding: 	5rem;
+
+
+$heading-font-family:		'Roboto Slab', serif;
+$heading-font-size:			5rem;
+
+$p-lead-font-family:		'Roboto', serif;
+$p-lead-font-size:			2rem;
+$p-lead-font-weight:		400;
