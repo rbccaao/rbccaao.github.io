@@ -1,0 +1,41 @@
+#navbar {
+	background-color: $brown;
+	.navbar-nav {
+		position: relative;
+		li {
+			width: 5rem;
+			text-align: center;
+		}
+		a {
+			transition: .5s ease-in-out;
+			&:hover, &:focus, &.active {
+				color: $nav-link-color-active;
+				outline: 0;
+			}
+		}
+	}
+
+	.indicator-hover, .indicator-active {
+		display: none;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		transition: $default-transition;
+	}
+	.indicator-hover {
+		border-bottom: 1px solid $nav-link-color-active;
+	}
+	.indicator-active:after {
+		$arrow-size: 5px;
+		content: "";
+		position: absolute;
+		width: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		border-left: $arrow-size solid transparent;
+		border-right: $arrow-size solid transparent;
+		border-bottom: $arrow-size solid $nav-link-color-active;
+	}
+}

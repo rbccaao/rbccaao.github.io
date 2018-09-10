@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include head.html %}
-<body data-spy='scroll' data-target='#nav-bar' data-offset="10">
+<body class="scroll-area" data-spy="scroll" data-target="#navbar" data-offset="100">
+	<a name="top"></a>
 		{% include navigation.html %}
 		{{ content }}
+		{% include scripts.html %}
 </body>
 </html>

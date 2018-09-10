@@ -1,5 +1,6 @@
 body {
 	color: $text-color;
+	position: relative;
 }
 
 p.lead {
@@ -9,88 +10,50 @@ p.lead {
 
 a {
 	color: $link-color;
-	&:hover,&:focus, &:active, &.active {
+	&:hover, &:focus, &.active {
 		color: $link-color-active;
 	}
 }
 
 hr {
-	border-color: rgba($yellow, 0.5);
+	border-color: rgba($white, 0.5);
 	width: 50%;
 	margin: $text-margin auto;
+}
+
+.height-page-75 {
+	min-height: 75vh;
+}
+.height-page-50 {
+	min-height: 50vh;
 }
 
 section:nth-child(odd) {
 	background-color: $light-grey;
 }
-
 section:nth-child(even) {
 	background-color: $yellow;
 }
-
 section.parallax {
-	background-color: rgba($yellow, 0.2);
+	background-color: unset;
 }
-
 section > .container {
 	padding-top: $section-padding;
 	padding-bottom: $section-padding;
 }
 
 section#about {
-	color: $brown;
 	display: flex;
 	align-items: center;
+	color: $white;
+	text-shadow: 2px 2px 2px $brown;
 	h1 {
 		font-family: $heading-font-family;
 		font-size: $heading-font-size;
 	}
-}
-
-.height-page-75 {
-	min-height: 75vh;
-}
-
-.height-page-50 {
-	min-height: 100vh;
-}
-
-#nav-bar {
-	background-color: $brown;
-	.nav-list {
-		position: relative;
-	}
-	a {
-		flex: 0 0 100px;
-		text-align: center;
-	}
-	a.active {
-		/*border-bottom-color: $orange;*/
-		/*transition: .3s ease-in-out;*/
-	}
-	.indicator {
-		width: 100px;
-		bottom: 0;
-		border-bottom: 2px solid $orange;
-		transition: .3s ease-in-out;
-		position: absolute;
-	}
-	a.active:hover {
-		color: $orange
-	}
-	a.active:nth-child(1) ~ .indicator {
-		right: calc(100px * 4);
-	}
-	a.active:nth-child(2) ~ .indicator {
-		right: calc(100px * 3);
-	}
-	a.active:nth-child(3) ~ .indicator {
-		right: calc(100px * 2);
-	}
-	a.active:nth-child(4) ~ .indicator {
-		right: calc(100px * 1)
-;	}
-	a.active:nth-child(5) ~ .indicator {
-		right: 0;
+	.box {
+		background-color: rgba($brown, 0.5);
+		border: 1px solid $light-grey;
+		padding: 7.5rem;
 	}
 }
