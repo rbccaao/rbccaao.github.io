@@ -5,7 +5,6 @@ $brown:				#382600;
 $light-grey:		#f6f6f6;
 $dark-grey: 		#252a2a;
 
-
 $text-color:			$brown;
 $link-color: 			$yellow;
 $link-color-hover: 		$orange;
@@ -14,16 +13,19 @@ $highlight-color:		$white;
 $nav-link-color-active: $white;
 
 
-$section-padding: 	5rem;
-$text-margin:		1.5rem;
-
+$base-font-size:			16px;
+$base-font-size-md:			14px;
+$base-font-size-sm:			12px;
 
 $heading-font-family:		'Roboto Slab', serif;
-$heading-font-size:			5rem;
+$heading-font-size:			5em;
 
 $p-lead-font-family:		'Roboto', serif;
-$p-lead-font-size:			2rem;
+$p-lead-font-size:			2em;
 $p-lead-font-weight:		400;
 
+
+$section-padding: 			3em;
+$text-margin:				1.5em;
 
 $default-transition:		0.5s ease-in-out;

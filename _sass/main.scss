@@ -1,4 +1,9 @@
+html {
+	font-size: $base-font-size;
+}
+
 body {
+	font-size: $base-font-size;
 	color: $text-color;
 	position: relative;
 }
@@ -28,6 +33,9 @@ hr {
 	min-height: 50vh;
 }
 
+section {
+	display: flex;
+}
 section:nth-child(odd) {
 	background-color: $light-grey;
 }
@@ -40,6 +48,7 @@ section.parallax {
 section > .container {
 	padding-top: $section-padding;
 	padding-bottom: $section-padding;
+	align-self: center;
 }
 
 section#about {
@@ -52,8 +61,18 @@ section#about {
 		font-size: $heading-font-size;
 	}
 	.box {
-		background-color: rgba($brown, 0.5);
+		@include transparent-bg($brown);
 		border: 1px solid $light-grey;
-		padding: 7.5rem;
+		padding: 7.5em;
+	}
+}
+
+@include media-breakpoint-down(md) {
+	section#about {
+		@include transparent-bg($brown);
+		font-size: 10px;
+		.box {
+			@include reset;
+		}
 	}
 }

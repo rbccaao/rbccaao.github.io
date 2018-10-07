@@ -1,0 +1,14 @@
+@include media-breakpoint-down(md) { 
+	html {
+		font-size: $base-font-size-md;
+	}
+
+	.height-page-75, .height-page-50 {
+		min-height: 0;
+	}
+}
+@include media-breakpoint-down(sm) { 
+	html {
+		font-size: $base-font-size-sm;
+	}
+}

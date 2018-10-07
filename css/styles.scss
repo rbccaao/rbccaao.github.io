@@ -2,6 +2,11 @@
 # custom styles
 ---
 
+@import "bootstrap/bootstrap";
+
 @import "variables";
+@import "mixin";
+
 @import "main";
+@import "responsive";
 @import "navbar";
