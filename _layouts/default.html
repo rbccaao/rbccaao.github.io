@@ -3,8 +3,10 @@
 {% include head.html %}
 <body class="scroll-area" data-spy="scroll" data-target="#navbar" data-offset="100">
 	<a name="top"></a>
-		{% include navigation.html %}
-		{{ content }}
+		{% include banner.html %}
+		<div id="content">
+			{{ content }}
+		</div>
 		{% include scripts.html %}
 </body>
 </html>

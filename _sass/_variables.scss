@@ -12,6 +12,7 @@ $link-color-active: 	$orange;
 $highlight-color:		$white;
 $nav-link-color-active: $white;
 
+$nav-bar-bg:			$brown;
 
 $base-font-size:			16px;
 $base-font-size-md:			14px;
@@ -27,5 +28,9 @@ $p-lead-font-weight:		400;
 
 $section-padding: 			3em;
 $text-margin:				1.5em;
+$banner-size:				50vh;
+$banner-size-md:			$banner-size / 2;
+$banner-size-sm:			$banner-size / 3;
 
 $default-transition:		0.5s ease-in-out;
+$fast-transition:			0.2s ease-in-out;

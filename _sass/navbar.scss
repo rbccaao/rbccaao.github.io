@@ -1,13 +1,15 @@
 #navbar {
-	background-color: $brown;
+	background-color: $nav-bar-bg;
 	.navbar-nav {
 		position: relative;
+		flex-direction: row;
+		margin: auto;
 		li {
-			width: 5rem;
+			width: 5em;
 			text-align: center;
 		}
 		a {
-			transition: .5s ease-in-out;
+			transition: $default-transition;
 			&:hover, &:focus, &.active {
 				color: $nav-link-color-active;
 				outline: 0;

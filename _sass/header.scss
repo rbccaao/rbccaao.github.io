@@ -1,0 +1,71 @@
+header {
+	display: flex;
+	flex-direction: column;
+	height: $banner-size;
+	background-color: $nav-bar-bg;
+	pointer-events: none;
+	& * {
+		pointer-events: auto;
+	}
+
+	section {
+		display: flex;
+		flex: 1;
+		transition: $fast-transition;
+		background-image: url('../images/banner.jpg');
+		background-position: bottom;
+		text-shadow: 2px 2px 2px $brown;
+		.container {
+			@include transparent-bg($brown);
+			border: 1px solid $light-grey;
+			transition: $fast-transition;
+		}
+		h1 {
+			font-family: $heading-font-family;
+			font-size: $heading-font-size;
+		}
+		hr {
+			border-color: rgba($white, 0.5);
+			width: 50%;
+			margin: $text-margin auto;
+		}
+	}
+	&:not(.sm) section {
+		@extend %clear-link-decoration;
+	}
+
+	&.sm {
+		background-color: transparent;
+	}
+	&.sm section {
+		height: $banner-size-sm;
+		flex: 0;
+		.container {
+			height: 100%;
+			max-width: 100%;
+			border: 0;
+			font-size: 10px;
+		}
+		hr, p.lead {
+			display: none;
+		}
+	}
+}
+
+@include media-breakpoint-down(md) {
+	header {
+		height: $banner-size-md;
+
+		section {
+			font-size: 0.8rem;
+			.container {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				max-width: 100%;
+				height: 100%;
+				border: 0;
+			}
+		}
+	}
+}

@@ -20,10 +20,8 @@ a {
 	}
 }
 
-hr {
-	border-color: rgba($white, 0.5);
-	width: 50%;
-	margin: $text-margin auto;
+.text-white, .text-white a {
+	color: $white !important;
 }
 
 .height-page-75 {
@@ -33,46 +31,25 @@ hr {
 	min-height: 50vh;
 }
 
-section {
-	display: flex;
-}
-section:nth-child(odd) {
+section:nth-child(even) {
 	background-color: $light-grey;
 }
-section:nth-child(even) {
+section:nth-child(odd) {
 	background-color: $yellow;
 }
 section.parallax {
 	background-color: unset;
 }
-section > .container {
+section .container {
 	padding-top: $section-padding;
 	padding-bottom: $section-padding;
 	align-self: center;
 }
 
-section#about {
-	display: flex;
-	align-items: center;
-	color: $white;
-	text-shadow: 2px 2px 2px $brown;
-	h1 {
-		font-family: $heading-font-family;
-		font-size: $heading-font-size;
-	}
-	.box {
-		@include transparent-bg($brown);
-		border: 1px solid $light-grey;
-		padding: 7.5em;
-	}
-}
-
-@include media-breakpoint-down(md) {
-	section#about {
-		@include transparent-bg($brown);
-		font-size: 10px;
-		.box {
-			@include reset;
-		}
-	}
+a.anchor:before {
+	content: "x";
+    display: block;
+    position: relative;
+    visibility: hidden;
+    top: -$banner-size-sm;
 }
