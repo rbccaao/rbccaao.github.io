@@ -13,26 +13,3 @@ function resizeHeaderOnScroll() {
 
 window.addEventListener('scroll', resizeHeaderOnScroll);
 document.addEventListener('DOMContentLoaded', resizeHeaderOnScroll);
-
-// V1
-/* $(document).ready(function() {
-	var breakpoint = $("header").height() * 0.5;
-	setStickyState();
-
-	$(window).on("scroll", function() {
-		setStickyState();
-	});
-
-	function setStickyState() {
-		if (!$("header").hasClass("sm sticky-top")) {
-			if ($(document).scrollTop() > breakpoint) {
-				$("header").addClass("sm sticky-top");
-			}
-		}
-		else {
-			if ($(document).scrollTop() < breakpoint) {
-				$("header").removeClass("sm sticky-top");
-			}
-		}
-	}
-}) */

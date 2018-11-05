@@ -38,8 +38,7 @@ header {
 		background-color: transparent;
 	}
 	&.sm section {
-		height: $banner-size-sm;
-		flex: 0;
+		flex: $banner-size-sm 0 1;
 		.container {
 			height: 100%;
 			max-width: 100%;
