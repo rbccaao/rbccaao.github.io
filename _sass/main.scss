@@ -31,6 +31,9 @@ a {
 	min-height: 50vh;
 }
 
+section {
+	position: relative;
+}
 section:nth-child(even) {
 	background-color: $light-grey;
 }
@@ -46,10 +49,12 @@ section .container {
 	align-self: center;
 }
 
-a.anchor:before {
-	content: "x";
-    display: block;
-    position: relative;
-    visibility: hidden;
-    top: -$banner-size-sm;
+a.anchor {
+	display: block;
+	position: absolute;
+	top: -$banner-size-sm;
+	&:before {
+		content: "x";
+		visibility: hidden;
+	}
 }

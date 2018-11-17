@@ -13,7 +13,7 @@ header {
 		flex: 1;
 		transition: $fast-transition;
 		background-image: url('../images/banner.jpg');
-		background-position: bottom;
+		background-position: center;
 		text-shadow: 2px 2px 2px $brown;
 		.container {
 			@include transparent-bg($brown);
@@ -40,10 +40,13 @@ header {
 	&.sm section {
 		flex: $banner-size-sm 0 1;
 		.container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 			height: 100%;
 			max-width: 100%;
 			border: 0;
-			font-size: 10px;
+			font-size: 0.8em;
 		}
 		hr, p.lead {
 			display: none;
@@ -54,6 +57,7 @@ header {
 @include media-breakpoint-down(md) {
 	header {
 		height: $banner-size-md;
+		min-height: 20em;
 
 		section {
 			font-size: 0.8rem;
