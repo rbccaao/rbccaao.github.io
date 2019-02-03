@@ -3,13 +3,35 @@ html {
 }
 
 body {
+	font-family: $default-font-family;
 	font-size: $base-font-size;
+	line-height: 2;
 	color: $text-color;
 	position: relative;
 }
 
-p.lead {
-	font-size: $p-lead-font-size;
+h1, h2, h3, h4, h5, h6, ul {
+	margin-bottom: $text-margin;
+}
+
+ul, ol {
+	list-style-type: none;
+	padding: 0 2rem;
+	margin-left: 0;
+	margin-right: 0;
+	@include border('left');
+	.text-right & {
+		@include border('right');
+		border-left: 0;
+	}
+}
+.list-column {
+	columns: 3;
+}
+.list-inline-item {
+	&:not(:last-child):after {
+		content: ", ";
+	}
 }
 
 a {
@@ -18,9 +40,14 @@ a {
 		color: $link-color-active;
 	}
 }
-
-.text-white, .text-white a {
-	color: $white !important;
+a.anchor {
+	display: block;
+	position: absolute;
+	top: -$banner-size-sm;
+	&:before {
+		content: "x";
+		visibility: hidden;
+	}
 }
 
 .height-page-75 {
@@ -32,28 +59,13 @@ a {
 
 section {
 	position: relative;
-}
-section:nth-child(even) {
-	background-color: $light-grey;
-}
-section:nth-child(odd) {
-	background-color: $yellow;
-}
-section.parallax {
-	background-color: unset;
-}
-section .container {
-	padding-top: $section-padding;
-	padding-bottom: $section-padding;
-	align-self: center;
-}
+	.container {
+		padding-top: $section-padding;
+		padding-bottom: $section-padding;
+		align-self: center;
+	}
 
-a.anchor {
-	display: block;
-	position: absolute;
-	top: -$banner-size-sm;
-	&:before {
-		content: "x";
-		visibility: hidden;
+	.sub-section:not(:last-of-type) {
+		margin-bottom: $section-padding;
 	}
 }

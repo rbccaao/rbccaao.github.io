@@ -10,7 +10,10 @@
 @mixin transparent-bg-weak($color) {
 	background-color: rgba($color, 0.3);
 }
-
 @mixin transparent-bg-strong($color) {
 	background-color: rgba($color, 0.5);
+}
+
+@mixin border($side) {
+	border-#{$side}: $border-width solid $border-color;
 }

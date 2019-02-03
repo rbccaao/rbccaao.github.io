@@ -28,6 +28,10 @@ header {
 			font-family: $heading-font-family;
 			font-size: $heading-font-size-1;
 		}
+		p.lead {
+			font-family: $sub-font-family;
+			font-size: $sub-font-size;
+		}
 		hr {
 			border-color: rgba($white, 0.5);
 			width: 50%;

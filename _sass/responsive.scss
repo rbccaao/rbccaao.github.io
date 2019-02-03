@@ -11,4 +11,14 @@
 	html {
 		font-size: $base-font-size-sm;
 	}
+	.list-column {
+		columns: 1;
+	}
+	.list-inline-item {
+		display: block;
+		margin: 0 !important;
+		&:not(:last-child):after {
+			content: "";
+		}
+	}
 }
