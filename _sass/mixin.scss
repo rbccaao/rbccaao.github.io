@@ -7,6 +7,10 @@
 	}
 }
 
-@mixin transparent-bg($color) {
-	box-shadow: inset 0 0 0 1000px rgba($color, 0.5);
+@mixin transparent-bg-weak($color) {
+	background-color: rgba($color, 0.3);
+}
+
+@mixin transparent-bg-strong($color) {
+	background-color: rgba($color, 0.5);
 }
