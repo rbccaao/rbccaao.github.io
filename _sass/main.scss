@@ -22,7 +22,6 @@ ul, ol {
 	@include border('left');
 	.text-right & {
 		@include border('right');
-		border-left: 0;
 	}
 }
 .list-column {
@@ -43,7 +42,7 @@ a {
 a.anchor {
 	display: block;
 	position: absolute;
-	top: -$banner-size-sm;
+	top: -$banner-height-md;
 	&:before {
 		content: "x";
 		visibility: hidden;

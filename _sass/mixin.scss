@@ -14,6 +14,22 @@
 	background-color: rgba($color, 0.5);
 }
 
-@mixin border($side) {
-	border-#{$side}: $border-width solid $border-color;
+@mixin border($side:null) {
+	border-width: 0;
+	@if $side == 'y' {
+		border-top-width: $border-width;
+		border-bottom-width: $border-width;
+	}
+	@else if $side == 'x' {
+		border-left-width: $border-width;
+		border-right-width: $border-width;
+	}
+	@else if $side == 'null' {
+		border-width: $border-width;
+	}
+	@else {
+		border-#{$side}: $border-width;
+	}
+	border-style: solid;
+	border-color: $border-color;
 }

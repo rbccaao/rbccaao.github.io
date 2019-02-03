@@ -1,7 +1,7 @@
 header {
 	display: flex;
 	flex-direction: column;
-	height: $banner-size-md;
+	height: $banner-height;
 	background-color: $nav-bar-bg;
 	pointer-events: none;
 	& * {
@@ -23,6 +23,7 @@ header {
 			justify-content: center;
 			height: 100%;
 			max-width: 100%;
+			padding: 0;
 		}
 		h1 {
 			font-family: $heading-font-family;
@@ -44,26 +45,26 @@ header {
 
 	&.sm {
 		background-color: transparent;
-	}
-	&.sm section {
-		flex: $banner-size-sm 0 1;
-		.container {
-			@include transparent-bg-strong($black);
-			font-size: 0.8em;
-		}
-		hr, p.lead {
-			display: none;
+		section {
+			flex: $banner-height-sm 0 1;
+			.container {
+				@include transparent-bg-strong($black);
+				font-size: $base-font-size-sm;
+			}
+			hr, p.lead {
+				display: none;
+			}
 		}
 	}
 }
 
 @include media-breakpoint-down(md) {
 	header {
-		height: $banner-size-md;
+		height: $banner-height-md;
 		min-height: 20em;
 
 		section {
-			font-size: 0.8rem;
+			font-size: $base-font-size-md;
 		}
 	}
 }

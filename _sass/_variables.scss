@@ -12,18 +12,19 @@ $link-color: 			$yellow;
 $link-color-hover: 		$orange;
 $link-color-active: 	$orange;
 $highlight-color:		$white;
-$nav-link-color:		$brown;
-$nav-link-color-active: $dark-grey;
+$nav-link-color:		$text-color;
+$nav-link-color-active: $yellow;
 $border-color:          $yellow;
 
 $nav-bar-bg:			$white;
+$nav-bar-height:        4rem;
 
 $base-font-size:			16px;
 $base-font-size-md:			14px;
 $base-font-size-sm:			12px;
 
 $heading-font-family:		'Caveat Brush', Arial;
-$heading-font-size-1:		5rem;
+$heading-font-size-1:		5em;
 
 $sub-font-family:		    'Kalam', Arial;
 $sub-font-size:			    2rem;
@@ -32,9 +33,9 @@ $default-font-family:       'Heebo', Arial;
 
 $section-padding: 			3rem;
 $text-margin:				1.5rem;
-$banner-size:				75vh;
-$banner-size-md:			$banner-size / 2;
-$banner-size-sm:			$banner-size / 4;
+$banner-height:				25rem;
+$banner-height-md:			$banner-height / 2;
+$banner-height-sm:			$banner-height / 4;
 
 $default-transition:		0.5s ease-in-out;
 $fast-transition:			0.2s ease-in-out;

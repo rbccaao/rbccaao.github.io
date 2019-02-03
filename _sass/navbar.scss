@@ -1,10 +1,14 @@
 #navbar {
 	background-color: $nav-bar-bg;
+	height: $nav-bar-height;
 	z-index: $zindex-fixed;
+	padding: 0;
+	box-shadow: 0 5px 5px $light-grey;
 	.navbar-nav {
 		position: relative;
 		flex-direction: row;
 		margin: auto;
+		border: 0;
 		li {
 			width: 5em;
 			text-align: center;
