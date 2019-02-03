@@ -1,36 +1,39 @@
 $white:				#ffffff;
-$yellow: 			#ffcc00;
+$yellow: 			#ffd700;
 $orange:			#d35400;
 $brown:				#382600;
+$grey:				#C8C8C8;
 $light-grey:		#f6f6f6;
 $dark-grey: 		#252a2a;
+$black:				#000000;
 
-$text-color:			$brown;
+$text-color:			$dark-grey;
 $link-color: 			$yellow;
 $link-color-hover: 		$orange;
 $link-color-active: 	$orange;
 $highlight-color:		$white;
-$nav-link-color-active: $white;
+$nav-link-color:		$brown;
+$nav-link-color-active: $dark-grey;
 
-$nav-bar-bg:			$brown;
+$nav-bar-bg:			$white;
 
 $base-font-size:			16px;
 $base-font-size-md:			14px;
 $base-font-size-sm:			12px;
 
-$heading-font-family:		'Roboto Slab', serif;
-$heading-font-size:			5em;
+$heading-font-family:		'Caveat Brush', Arial;
+$heading-font-size-1:		5em;
 
-$p-lead-font-family:		'Roboto', serif;
+$p-lead-font-family:		'Kalam', Arial;
 $p-lead-font-size:			2em;
-$p-lead-font-weight:		400;
 
+$default-font-family:       'Heebo', Arial;
 
 $section-padding: 			3em;
 $text-margin:				1.5em;
-$banner-size:				50vh;
+$banner-size:				75vh;
 $banner-size-md:			$banner-size / 2;
-$banner-size-sm:			$banner-size / 3;
+$banner-size-sm:			$banner-size / 4;
 
 $default-transition:		0.5s ease-in-out;
 $fast-transition:			0.2s ease-in-out;

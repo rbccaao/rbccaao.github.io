@@ -1,5 +1,6 @@
 #navbar {
 	background-color: $nav-bar-bg;
+	z-index: $zindex-fixed;
 	.navbar-nav {
 		position: relative;
 		flex-direction: row;
@@ -10,6 +11,7 @@
 		}
 		a {
 			transition: $default-transition;
+			color: $nav-link-color;
 			&:hover, &:focus, &.active {
 				color: $nav-link-color-active;
 				outline: 0;
