@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
 	var links = $(".nav-link");
 	var linkPositions = [0];
 	var linkWidths = [];
@@ -9,14 +9,14 @@ $(document).ready(function() {
 	var hover = $(".indicator-hover");
 
 	// initialize link positions and widths
-	for (var i=0; i < links.length; i++) {
+	for (var i = 0; i < links.length; i++) {
 		var linkWidth = $(links[i]).outerWidth()
 		linkWidths.push(linkWidth);
 
 		linkPosition += linkWidth;
 		linkPositions.push(linkPosition);
 
-		setTimeout(function() {
+		setTimeout(function () {
 			activePosition = returnIndex(links.filter(".active"));
 			moveIndicatorsToActive();
 			showIndicators();
@@ -25,24 +25,25 @@ $(document).ready(function() {
 
 	// move indicator to new positions on scroll
 	// delay to allow for other transitions to complete first
-	$(window).on('scroll', function() {
-		setTimeout(function() {
+	$(window).on('scroll', function () {
+		setTimeout(function () {
 			activePosition = returnIndex(links.filter(".active"));
 			moveIndicatorsToActive();
+			showIndicators();
 		}, 500);
 	});
 
 	// move indicators to new positions on click
-	links.click(function() {
+	links.click(function () {
 		activePosition = returnIndex(this);
 		moveIndicatorsToActive();
 	});
 
 	// move hover indicator on hover and focus
-	links.on("mouseenter focusin", function() {
+	links.on("mouseenter focusin", function () {
 		moveIndicator(hover, returnIndex(this));
 	});
-	links.on("mouseleave focusout", function() {
+	links.on("mouseleave focusout", function () {
 		moveIndicator(hover, activePosition);
 	});
 
@@ -58,10 +59,15 @@ $(document).ready(function() {
 		moveIndicator(hover, activePosition);
 	}
 
-	// show indicators on page ready
+	// show indicators based on nav link active state
 	function showIndicators() {
-		active.css("display", "block");
-		hover.css("display", "block");
+		if (returnIndex(links.filter(".active")) < 0) {
+			active.css("display", "none");
+			hover.css("display", "none");
+		} else {
+			active.css("display", "block");
+			hover.css("display", "block");
+		}
 	}
 
 	// return index of parent element
