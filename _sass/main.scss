@@ -35,8 +35,11 @@ ul, ol {
 
 a {
 	color: $link-color;
+	transition: $transition-default;
+	text-decoration: underline;
 	&:hover, &:focus, &.active {
 		color: $link-color-active;
+		text-decoration: none;
 	}
 }
 a.anchor {
@@ -47,6 +50,13 @@ a.anchor {
 		content: "x";
 		visibility: hidden;
 	}
+}
+a.link-deco-none {
+	text-decoration: none !important;
+}
+
+.fa-fw {
+	width: 1.5em;
 }
 
 section {

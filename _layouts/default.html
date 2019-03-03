@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include head.html %}
+
 <body class="scroll-area" data-spy="scroll" data-target="#navbar" data-offset="100">
 	<a name="top"></a>
-		{% include banner.html %}
-		<div id="content">
-			{{ content }}
-		</div>
-		{% include scripts.html %}
+	{% include banner.html %}
+	<div id="content">
+		{{ content }}
+		{% include footer.html %}
+	</div>
+	{% include scripts.html %}
 </body>
+
 </html>
