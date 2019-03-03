@@ -45,7 +45,7 @@ a {
 a.anchor {
 	display: block;
 	position: absolute;
-	top: -$banner-height-md;
+	top: -$banner-height-md / 2;
 	&:before {
 		content: "x";
 		visibility: hidden;

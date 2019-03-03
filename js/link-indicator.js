@@ -19,7 +19,7 @@ $(document).ready(function () {
 		setTimeout(function () {
 			activePosition = returnIndex(links.filter(".active"));
 			moveIndicatorsToActive();
-			showIndicators();
+			setIndicatorDisplay();
 		}, 500);
 	}
 
@@ -29,7 +29,7 @@ $(document).ready(function () {
 		setTimeout(function () {
 			activePosition = returnIndex(links.filter(".active"));
 			moveIndicatorsToActive();
-			showIndicators();
+			setIndicatorDisplay();
 		}, 500);
 	});
 
@@ -41,9 +41,11 @@ $(document).ready(function () {
 
 	// move hover indicator on hover and focus
 	links.on("mouseenter focusin", function () {
+		hover.css("display", "block");
 		moveIndicator(hover, returnIndex(this));
 	});
 	links.on("mouseleave focusout", function () {
+		setIndicatorDisplay();
 		moveIndicator(hover, activePosition);
 	});
 
@@ -59,14 +61,19 @@ $(document).ready(function () {
 		moveIndicator(hover, activePosition);
 	}
 
-	// show indicators based on nav link active state
+	// show indicators
 	function showIndicators() {
+		active.css("display", "block");
+		hover.css("display", "block");
+	}
+
+	// hide indicator based on nav link active state
+	function setIndicatorDisplay() {
 		if (returnIndex(links.filter(".active")) < 0) {
 			active.css("display", "none");
 			hover.css("display", "none");
 		} else {
-			active.css("display", "block");
-			hover.css("display", "block");
+			showIndicators()
 		}
 	}
 
