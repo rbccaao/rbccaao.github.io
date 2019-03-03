@@ -11,13 +11,13 @@ header {
 	section {
 		display: flex;
 		flex: 1;
-		transition: $fast-transition;
+		transition: $transition-default;
 		background-image: url('../images/banner-gray.jpg');
 		background-position: center;
 		text-shadow: 1px 1px 0 $white;
 		.container {
 			@include transparent-bg-weak($black);
-			transition: $fast-transition;
+			transition: $transition-default;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;

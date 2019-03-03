@@ -37,5 +37,5 @@ $banner-height:				25rem;
 $banner-height-md:			$banner-height / 2;
 $banner-height-sm:			$banner-height / 4;
 
-$default-transition:		0.5s ease-in-out;
-$fast-transition:			0.2s ease-in-out;
+$transition-slow:		    0.5s ease-in-out;
+$transition-default:		0.2s ease-in-out;

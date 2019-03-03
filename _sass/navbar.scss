@@ -14,7 +14,6 @@
 			text-align: center;
 		}
 		a {
-			transition: $default-transition;
 			color: $nav-link-color;
 			&:hover, &:focus, &.active {
 				color: $nav-link-color-active;
@@ -28,7 +27,7 @@
 		position: absolute;
 		left: 0;
 		bottom: 0;
-		transition: $default-transition;
+		transition: $transition-slow;
 	}
 	.indicator-hover {
 		border-bottom: 1px solid $nav-link-color-active;
