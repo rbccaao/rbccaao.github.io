@@ -1,27 +1,19 @@
 $(document).ready(function () {
 	var links = $(".nav-link");
+	var linkPosition = 0;
 	var linkPositions = [0];
 	var linkWidths = [];
 	var activePosition = 0;
-	var linkPosition = 0;
 
 	var active = $(".indicator-active");
 	var hover = $(".indicator-hover");
 
-	// initialize link positions and widths
-	for (var i = 0; i < links.length; i++) {
-		var linkWidth = $(links[i]).outerWidth()
-		linkWidths.push(linkWidth);
+	initializeIndicators();
 
-		linkPosition += linkWidth;
-		linkPositions.push(linkPosition);
-
-		setTimeout(function () {
-			activePosition = returnIndex(links.filter(".active"));
-			moveIndicatorsToActive();
-			setIndicatorDisplay();
-		}, 500);
-	}
+	// reset indicators with new positions based on window size
+	$(window).resize(function () {
+		initializeIndicators();
+	});
 
 	// move indicator to new positions on scroll
 	// delay to allow for other transitions to complete first
@@ -48,6 +40,33 @@ $(document).ready(function () {
 		setIndicatorDisplay();
 		moveIndicator(hover, activePosition);
 	});
+
+	// set up positions and sizes for each link
+	function initializeIndicators() {
+		setTimeout(function () {
+			linkPosition = 0;
+			linkPositions = [0];
+			linkWidths = [];
+
+			for (var i = 0; i < links.length; i++) {
+				var linkWidth = $(links[i]).outerWidth()
+				linkWidths.push(linkWidth);
+
+				console.log("#" + i);
+				console.log("position " + linkPosition);
+				console.log("width: " + linkWidth);
+
+				linkPosition += linkWidth;
+				linkPositions.push(linkPosition);
+
+				setTimeout(function () {
+					activePosition = returnIndex(links.filter(".active"));
+					moveIndicatorsToActive();
+					setIndicatorDisplay();
+				}, 500);
+			}
+		}, 500);
+	}
 
 	// move indicator to specific position
 	function moveIndicator(indicator, position) {

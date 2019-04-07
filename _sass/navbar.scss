@@ -1,21 +1,27 @@
 #navbar {
 	background-color: $nav-bar-bg;
-	height: $nav-bar-height;
 	z-index: $zindex-fixed;
 	padding: 0;
-	box-shadow: 0 5px 5px $light-grey;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 	.navbar-nav {
 		position: relative;
 		flex-direction: row;
 		margin: auto;
-		border: 0;
-		li {
-			width: 5em;
+        border: 0;
+        margin-top: 1px;
+        margin-bottom: 1px;
+		li.nav-item {
 			text-align: center;
 		}
-		a {
+		a.nav-link {
 			color: $nav-link-color;
-			text-decoration: none;
+            text-decoration: none;
+            padding: 0.5rem 2rem;
 			&:hover, &:focus, &.active {
 				color: $nav-link-color-active;
 				outline: 0;
@@ -46,4 +52,13 @@
 		border-right: $arrow-size solid transparent;
 		border-bottom: $arrow-size solid $nav-link-color-active;
 	}
+}
+
+
+@include media-breakpoint-down(sm) { 
+    #navbar {
+        .container, .navbar-nav {
+            padding: 0;
+        }
+    }
 }
