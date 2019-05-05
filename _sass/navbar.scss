@@ -1,5 +1,5 @@
 #navbar {
-	background-color: $nav-bar-bg;
+	background-color: $nav-bg;
 	z-index: $zindex-fixed;
 	padding: 0;
     overflow: scroll;
@@ -23,7 +23,7 @@
             text-decoration: none;
             padding: 0.5rem 2rem;
 			&:hover, &:focus, &.active {
-				color: $nav-link-color-active;
+				color: $nav-link-active-color;
 				outline: 0;
 			}
 		}
@@ -37,7 +37,7 @@
 		transition: $transition-slow;
 	}
 	.indicator-hover {
-		border-bottom: 1px solid $nav-link-color-active;
+		border-bottom: 1px solid $nav-link-active-color;
 	}
 	.indicator-active:after {
 		$arrow-size: 5px;
@@ -50,7 +50,7 @@
 		margin: auto;
 		border-left: $arrow-size solid transparent;
 		border-right: $arrow-size solid transparent;
-		border-bottom: $arrow-size solid $nav-link-color-active;
+		border-bottom: $arrow-size solid $nav-link-active-color;
 	}
 }
 

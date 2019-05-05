@@ -1,17 +1,5 @@
-html {
-	font-size: $base-font-size;
-}
-
 body {
-	font-family: $default-font-family;
-	font-size: $base-font-size;
-	line-height: 2;
-	color: $text-color;
 	position: relative;
-}
-
-h1, h2, h3, h4, h5, h6, ul {
-	margin-bottom: $text-margin;
 }
 
 ul, ol {
@@ -38,7 +26,7 @@ a {
 	transition: $transition-default;
 	text-decoration: underline;
 	&:hover, &:focus, &.active {
-		color: $link-color-active;
+		color: $link-hover-color;
 		text-decoration: none;
 	}
 }

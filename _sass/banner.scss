@@ -2,7 +2,7 @@ header {
 	display: flex;
 	flex-direction: column;
 	height: $banner-height;
-	background-color: $nav-bar-bg;
+	background-color: $nav-bg;
 	pointer-events: none;
 	& * {
 		pointer-events: auto;
@@ -19,6 +19,8 @@ header {
 			flex-direction: column;
 			justify-content: center;
 			height: 100%;
+			padding-top: 0;
+			padding-bottom: 0;
 			.row > * {
 				transition: $transition-default;
 				background-color: $off-black;
@@ -30,20 +32,22 @@ header {
 		}
 		h1 {
 			@include text-line(right);
-			font-family: $heading-font-family;
-			font-size: $heading-font-size-1;
+			font-family: $banner-heading-font-family;
+			font-size: $banner-heading-font-size;
 		}
-		p.lead {
+		p {
 			@include text-line(left);
-			font-family: $sub-font-family;
-			font-size: $sub-font-size;
+			font-family: $banner-sub-font-family;
+			font-size: $banner-sub-font-size;
 			line-height: 1.5;
 		}
 		a {
-			color: $heading-font-color;
+			color: $banner-color;
 			&:hover, &:focus, &.active {
-				color: $heading-font-color-hover;
-				text-decoration: none;
+				color: $banner-hover-color;
+				*::before, *::after {
+					background-color: $banner-hover-color;
+				}
 			}
 		}
 	}
@@ -53,7 +57,7 @@ header {
 		section {
 			flex: $banner-height-sm 0 1;
 			.container {
-				font-size: $base-font-size-sm;
+				font-size: $font-size-sm;
 				max-width: 100%;
 				padding-top: 0;
 				padding-bottom: 0;
@@ -87,10 +91,9 @@ header {
 @include media-breakpoint-down(md) {
 	header {
 		height: $banner-height-md;
-		min-height: 20em;
-
+		min-height: 20rem;
 		section {
-			font-size: $base-font-size-md;
+			font-size: $font-size-sm;
 		}
 	}
 }

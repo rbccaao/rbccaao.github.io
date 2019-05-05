@@ -1,45 +1,40 @@
-$white:				#ffffff;
-$yellow: 			#ffd700;
-$orange:			#d35400;
-$brown:				#382600;
-$grey:				#C8C8C8;
-$light-grey:		#f6f6f6;
-$dark-grey: 		#252a2a;
-$off-black:         #111111;
-$black:				#000000;
+$white:                         #ffffff;
+$yellow:                        #ffd700;
+$orange:                        #d35400;
+$brown:                         #382600;
+$grey:                          #C8C8C8;
+$light-grey:                    #f6f6f6;
+$dark-grey:                     #252a2a;
+$off-black:                     #111111;
+$black:                         #000000;
 
-$text-color:			$dark-grey;
-$link-color: 			$yellow;
-$link-color-hover: 		$orange;
-$link-color-active: 	$orange;
-$highlight-color:		$white;
-$nav-link-color:		$white;
-$nav-link-color-active: $yellow;
-$border-color:          $yellow;
+$body-color:                    $dark-grey;
+$link-color:                    $yellow;
+$link-hover-color:              $orange;
+$border-color:                  $yellow;
 
-$nav-bar-bg:			$off-black;
+$nav-bg:                        $off-black;
+$nav-link-color:                $white;
+$nav-link-active-color:         $yellow;
 
-$base-font-size:			16px;
-$base-font-size-md:			14px;
-$base-font-size-sm:			12px;
+$font-family-base:              'Heebo', Arial;
+$text-margin:                   1.5rem;
+$paragraph-margin-bottom:       $text-margin;
+$headings-margin-bottom:        $text-margin;
+$line-height-base:              2;
 
-$heading-font-family:		'Caveat Brush', Arial;
-$heading-font-size-1:		4em;
-$heading-font-color:        $yellow;
-$heading-font-color-hover:  $white;
+$banner-heading-font-family:    'Caveat Brush', Arial;
+$banner-heading-font-size:      3.8em;
+$banner-sub-font-family:        'Kalam', Arial;
+$banner-sub-font-size:          1.4em;
+$banner-color:                  $yellow;
+$banner-hover-color:            $white;
 
-$sub-font-family:		    'Kalam', Arial;
-$sub-font-size:			    1.6rem;
+$section-padding:               3rem;
 
-$lead-font-size:            ($base-font-size * 1.2);
+$banner-height:                 25rem;
+$banner-height-md:              $banner-height / 2;
+$banner-height-sm:              $banner-height / 4;
 
-$default-font-family:       'Heebo', Arial;
-
-$section-padding: 			3rem;
-$text-margin:				1.5rem;
-$banner-height:				25rem;
-$banner-height-md:			$banner-height / 2;
-$banner-height-sm:			$banner-height / 4;
-
-$transition-slow:		    0.5s ease-in-out;
-$transition-default:		0.2s ease-in-out;
+$transition-slow:		        0.5s ease-in-out;
+$transition-default:		    0.2s ease-in-out;

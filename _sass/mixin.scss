@@ -31,7 +31,7 @@
 	border-color: $border-color;
 }
 
-@mixin text-line($side:null) {
+@mixin text-line($side) {
 	display: flex;
 	&::before, &::after {
 		background-color: $yellow;

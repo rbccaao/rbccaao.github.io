@@ -10,7 +10,7 @@ $(document).ready(function () {
 
 	initializeIndicators();
 
-	// reset indicators with new positions based on window size
+	// reset indicators with new positions based on window resizing
 	$(window).resize(function () {
 		initializeIndicators();
 	});
@@ -51,10 +51,6 @@ $(document).ready(function () {
 			for (var i = 0; i < links.length; i++) {
 				var linkWidth = $(links[i]).outerWidth()
 				linkWidths.push(linkWidth);
-
-				console.log("#" + i);
-				console.log("position " + linkPosition);
-				console.log("width: " + linkWidth);
 
 				linkPosition += linkWidth;
 				linkPositions.push(linkPosition);
