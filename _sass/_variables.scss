@@ -5,6 +5,7 @@ $brown:				#382600;
 $grey:				#C8C8C8;
 $light-grey:		#f6f6f6;
 $dark-grey: 		#252a2a;
+$off-black:         #111111;
 $black:				#000000;
 
 $text-color:			$dark-grey;
@@ -16,17 +17,21 @@ $nav-link-color:		$white;
 $nav-link-color-active: $yellow;
 $border-color:          $yellow;
 
-$nav-bar-bg:			$black;
+$nav-bar-bg:			$off-black;
 
 $base-font-size:			16px;
 $base-font-size-md:			14px;
 $base-font-size-sm:			12px;
 
 $heading-font-family:		'Caveat Brush', Arial;
-$heading-font-size-1:		5em;
+$heading-font-size-1:		4em;
+$heading-font-color:        $yellow;
+$heading-font-color-hover:  $white;
 
 $sub-font-family:		    'Kalam', Arial;
-$sub-font-size:			    2rem;
+$sub-font-size:			    1.6rem;
+
+$lead-font-size:            ($base-font-size * 1.2);
 
 $default-font-family:       'Heebo', Arial;
 

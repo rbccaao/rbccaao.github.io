@@ -12,35 +12,40 @@ header {
 		display: flex;
 		flex: 1;
 		transition: $transition-default;
-		background-image: url('../images/banner-gray.jpg');
+		background-image: url('../images/banner.jpg');
 		background-position: center;
-		text-shadow: 1px 1px 0 $white;
 		.container {
-			@include transparent-bg-weak($black);
-			transition: $transition-default;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			height: 100%;
-			max-width: 100%;
-			padding: 0;
+			.row > * {
+				transition: $transition-default;
+				background-color: $off-black;
+				padding: 1rem 2rem;
+				* {
+					margin-bottom: 0;
+				}
+			}
 		}
 		h1 {
+			@include text-line(right);
 			font-family: $heading-font-family;
 			font-size: $heading-font-size-1;
 		}
 		p.lead {
+			@include text-line(left);
 			font-family: $sub-font-family;
 			font-size: $sub-font-size;
+			line-height: 1.5;
 		}
-		hr {
-			border-color: rgba($white, 0.5);
-			width: 50%;
-			margin: $text-margin auto;
+		a {
+			color: $heading-font-color;
+			&:hover, &:focus, &.active {
+				color: $heading-font-color-hover;
+				text-decoration: none;
+			}
 		}
-	}
-	&:not(.sm) section {
-		@extend %clear-link-decoration;
 	}
 
 	&.sm {
@@ -48,11 +53,32 @@ header {
 		section {
 			flex: $banner-height-sm 0 1;
 			.container {
-				@include transparent-bg-strong($black);
 				font-size: $base-font-size-sm;
+				max-width: 100%;
+				padding-top: 0;
+				padding-bottom: 0;
+				#name {
+					height: 100%;
+					> * {
+						@include transparent-bg($off-black);
+						margin: 0 !important;
+						text-align: center;
+						max-width: 100%;
+						flex-basis: 100%;
+					}
+				}
+				#sub {
+					display: none;
+				}
 			}
-			hr, p.lead {
-				display: none;
+			h1 {
+				display: block;
+				&::after {
+					content: none;
+				}
+			}
+			a {
+				height: 100%;
 			}
 		}
 	}

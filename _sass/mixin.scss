@@ -7,11 +7,8 @@
 	}
 }
 
-@mixin transparent-bg-weak($color) {
-	background-color: rgba($color, 0.3);
-}
-@mixin transparent-bg-strong($color) {
-	background-color: rgba($color, 0.5);
+@mixin transparent-bg($color) {
+	background-color: rgba($color, 0.8);
 }
 
 @mixin border($side:null) {
@@ -32,4 +29,26 @@
 	}
 	border-style: solid;
 	border-color: $border-color;
+}
+
+@mixin text-line($side:null) {
+	display: flex;
+	&::before, &::after {
+		background-color: $yellow;
+		flex: 1;
+		height: 1px;
+		align-self: center;
+	}
+	@if $side == 'left' {
+		&::before {
+			content: "";
+			margin-right: 1rem;
+		}
+	}
+	@else if $side == 'right' {
+		&::after {
+			content: "";
+			margin-left: 1rem;
+		}
+	}
 }
