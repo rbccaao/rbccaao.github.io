@@ -2,10 +2,19 @@
 	html {
 		// font-size: $font-size-sm;
 	}
+	.grid-container {
+		grid-template-columns: auto auto;
+	}
 }
 @include media-breakpoint-down(sm) { 
 	html {
 		// font-size: $font-size-sm;
+	}
+	.grid-container {
+		grid-template-columns: auto;
+		> div {
+			grid-area: auto / auto / auto / auto !important;
+		}
 	}
 	.list-column {
 		columns: 1;
