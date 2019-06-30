@@ -1,0 +1,41 @@
+<button type="button" class="card-button btn" data-toggle="modal" data-target="#{{ include.name }}">
+    <div class="card-img-wrapper">
+        <img class="card-img-top" src="../../images/projects/{{ include.name }}-main.png" alt="{{ include.name }} screenshot">
+    </div>
+    <div class="card-body">
+        <h3 class="card-title">{{ include.title }}
+            <p class="card-text card-date"><small class="text-muted align-middle">{{ include.date }}</small></p>
+        </h3>
+        <p class="card-text">{{ include.description }}</p>
+    </div>
+</button>
+<div class="modal fade" id="{{ include.name }}" tabindex="-1" role="dialog" aria-labelledby="{{ include.name }}Title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="{{ include.name }}Title">
+                    {{ include.title }}
+                    <small class="text-muted align-middle">{{ include.date }}</small>
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body border-0">
+                <div class="container-fluid p-0">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>{{ include.description }}</p>
+                            {% if include.roles %}
+                            <p>Roles: {{ include.roles }}</p>
+                            {% endif %}
+                            <p>Skills: {{ include.skills }}</p>
+                            {{ include.body }}
+                        </div>
+                        <div class="col-md-6">Intended image gallery</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
