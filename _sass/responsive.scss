@@ -16,7 +16,7 @@
 			grid-area: auto / auto / auto / auto !important;
 		}
 	}
-	.list-column {
+	[class*="list-column-"] {
 		columns: 1;
 	}
 	.list-inline-item {
@@ -25,5 +25,8 @@
 		&:not(:last-child):after {
 			content: "";
 		}
+	}
+	.carousel-item img {
+		height: auto;
 	}
 }

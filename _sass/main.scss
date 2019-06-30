@@ -8,16 +8,24 @@ ul, ol {
 	margin-left: 0;
 	margin-right: 0;
 	@include border('left');
-	.text-right & {
+	.text-right &, &.text-right {
 		@include border('right');
 	}
 }
-.list-column {
+.list-column-3 {
 	columns: 3;
 }
-.list-inline-item {
-	&:not(:last-child):after {
-		content: ", ";
+.list-column-2 {
+	columns: 2;
+}
+
+.list-inline {
+	padding: 0 2rem;
+	li {
+		@extend .list-inline-item;
+		&:not(:last-child):after {
+			content: ", ";
+		}
 	}
 }
 
@@ -68,17 +76,13 @@ section {
 	.card {
 		grid-area: auto / auto / span 1 / span 1;
 		* {
-			&::before, &::after {
-				transition: $transition-default;
-			}
+			transition: $transition-default;
 		}
 		&:hover, &:focus, &:active {
 			border: 1px solid $border-color;
 
 			.card-img-wrapper {
-				&::after {
-					background: none;
-				}
+				filter: none;
 			}
 		}
 	}
@@ -103,16 +107,7 @@ section {
 
 	.card-img-wrapper {
 		position: relative;
-		&::after {
-			content: "";
-			position: absolute;
-			background-color: $white;
-			opacity: 0.2;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-		}
+		filter: opacity(80%);
 	}
 
 	.card-title {
@@ -127,4 +122,49 @@ section {
 
 .modal {
 	line-height: $line-height-base * 0.75;
+}
+
+.carousel {
+	.row > * {
+		padding: $grid-gutter-width;
+	}
+
+	.carousel-item img {
+		height: 60vh;
+		object-fit: contain;
+		object-position: top;
+	}
+}
+
+.carousel-indicators {
+	position: relative;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0;
+	li {
+		position: relative;
+		width: 33%;
+		height: auto;
+		text-indent: 0;
+		border: 1px solid transparent;
+		&::after {
+			content: "";
+			display: block;
+			padding-bottom: 100%;
+		}
+		&.active {
+			border-color: $border-color;
+		}
+		img {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			object-position: top;
+		}
+	}
 }

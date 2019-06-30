@@ -1,4 +1,4 @@
-<button type="button" class="card-button btn" data-toggle="modal" data-target="#{{ include.name }}">
+<button type="button" class="card-button btn" data-toggle="modal" data-target="#{{ include.name }}-modal">
     <div class="card-img-wrapper">
         <img class="card-img-top" src="../../images/projects/{{ include.name }}-main.png" alt="{{ include.name }} screenshot">
     </div>
@@ -9,30 +9,59 @@
         <p class="card-text">{{ include.description }}</p>
     </div>
 </button>
-<div class="modal fade" id="{{ include.name }}" tabindex="-1" role="dialog" aria-labelledby="{{ include.name }}Title" aria-hidden="true">
+<div class="modal fade" id="{{ include.name }}-modal" tabindex="-1" role="dialog" aria-labelledby="{{ include.name }}-title" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
         <div class="modal-content">
-            <div class="modal-header border-0">
-                <h5 class="modal-title" id="{{ include.name }}Title">
+            <div class="modal-header">
+                <h4 class="modal-title" id="{{ include.name }}-title">
                     {{ include.title }}
                     <small class="text-muted align-middle">{{ include.date }}</small>
-                </h5>
+                </h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body border-0">
+            <div class="modal-body">
                 <div class="container-fluid p-0">
                     <div class="row">
-                        <div class="col-md-6">
-                            <p>{{ include.description }}</p>
-                            {% if include.roles %}
-                            <p>Roles: {{ include.roles }}</p>
-                            {% endif %}
-                            <p>Skills: {{ include.skills }}</p>
-                            {{ include.body }}
+                        <div class="col">
+                            <p class="lead">{{ include.description }}</p>
                         </div>
-                        <div class="col-md-6">Intended image gallery</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 d-flex flex-column">
+                            {{ include.body }}
+                            <h5>Roles</h5>
+                            <ul class="list-inline mb-0">{{ include.roles }}</ul>
+                            <h5 class="text-right">Skills</h5>
+                            <ul class="text-right list-inline">{{ include.skills }}</ul>
+                            <ol id="{{ include.name }}-indicators" class="carousel-indicators mt-auto border-0">
+                                <li data-target="#{{ include.name }}-carousel" data-slide-to="0" class="active">
+                                    <img src="../../images/projects/{{ include.name }}-1.png" alt="{{ include.name }} screenshot thumbnail 1">
+                                </li>
+                                <li data-target="#{{ include.name }}-carousel" data-slide-to="1">
+                                    <img src="../../images/projects/{{ include.name }}-2.png" alt="{{ include.name }} screenshot thumbnail 2">
+                                </li>
+                                <li data-target="#{{ include.name }}-carousel" data-slide-to="2">
+                                    <img src="../../images/projects/{{ include.name }}-3.png" alt="{{ include.name }} screenshot thumbnail 3">
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="col-lg-6">
+                            <div id="{{ include.name }}-carousel" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="../../images/projects/{{ include.name }}-1.png" class="d-block w-100" alt="{{ include.name }} screenshot 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../../images/projects/{{ include.name }}-2.png" class="d-block w-100" alt="{{ include.name }} screenshot 2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../../images/projects/{{ include.name }}-3.png" class="d-block w-100" alt="{{ include.name }} screenshot 3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
