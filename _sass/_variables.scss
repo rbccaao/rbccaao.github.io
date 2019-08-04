@@ -18,10 +18,8 @@ $nav-link-color:                $white;
 $nav-link-active-color:         $yellow;
 
 $font-family-base:              'Heebo', Arial;
-$text-margin:                   1.5rem;
-$text-margin-sm:                1.2rem;
-$paragraph-margin-bottom:       $text-margin;
-$headings-margin-bottom:        $text-margin;
+$spacing-lg:                    1.5rem;
+$headings-margin-bottom:        $spacing-lg;
 $line-height-base:              2;
 
 $banner-heading-font-family:    'Caveat Brush', Arial;
@@ -32,8 +30,8 @@ $banner-color:                  $yellow;
 $banner-hover-color:            $white;
 
 $section-padding:               3rem;
-$modal-inner-padding:           $text-margin;
-$modal-header-padding:          $text-margin;
+$modal-inner-padding:           $spacing-lg;
+$modal-header-padding:          $spacing-lg;
 
 $banner-height:                 25rem;
 $banner-height-md:              $banner-height / 2;
