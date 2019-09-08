@@ -2,6 +2,21 @@ body {
 	position: relative;
 }
 
+.lead.quote {
+	font-family: $lead-quote-font-family;
+	font-size: $lead-quote-font-size;
+	font-weight: bold;
+	margin-bottom: $lead-quote-margin-bottom;
+	&::before {
+		content: open-quote;
+		position: absolute;
+		font-size: 60px;
+		font-weight: normal;
+		margin-left: -50px;
+		margin-top: -15px;
+	}
+}
+
 ul, ol {
 	list-style-type: none;
 	padding: 0 2rem;
@@ -37,6 +52,12 @@ a {
 		color: $link-hover-color;
 		text-decoration: none;
 	}
+	&.alternate {
+		color: $yellow;
+		&:hover, &:focus, &.active {
+			color: $link-hover-color;
+		}
+	}
 }
 a.anchor {
 	display: block;
@@ -55,11 +76,19 @@ a.external-link i {
 }
 
 .fa-fw {
-	width: 1.5em;
+	width: 2em;
 }
 
 section {
 	position: relative;
+	&:nth-child(odd) {
+		background-color: $white;
+	}
+	
+	&:nth-child(even) {
+		background-color: $light-grey;
+	}
+
 	.container {
 		padding-top: $section-padding;
 		padding-bottom: $section-padding;
@@ -81,8 +110,9 @@ section {
 		* {
 			transition: $transition-default;
 		}
+		border: 1px solid $border-color;
 		&:hover, &:focus, &:active {
-			border: 1px solid $border-color;
+			border: 1px solid $gray-300;
 
 			.card-img-wrapper {
 				filter: none;
