@@ -5,15 +5,22 @@ body {
 .lead.quote {
 	font-family: $lead-quote-font-family;
 	font-size: $lead-quote-font-size;
-	font-weight: bold;
+	font-weight: 400;
 	margin-bottom: $lead-quote-margin-bottom;
-	&::before {
-		content: open-quote;
+	text-align: justify;
+	&::before, &::after {
 		position: absolute;
 		font-size: 60px;
-		font-weight: normal;
-		margin-left: -50px;
-		margin-top: -15px;
+		font-weight: 200;
+		top: -25px;
+	}
+	&::before {
+		content: open-quote;
+		left: -25px;
+	}
+	&::after {
+		content: close-quote;
+		right: -25px;
 	}
 }
 
@@ -163,7 +170,7 @@ section {
 	}
 
 	.carousel-item img {
-		height: 60vh;
+		height: 70vh;
 		object-fit: contain;
 		object-position: top;
 	}
