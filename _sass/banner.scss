@@ -12,8 +12,10 @@ header {
 		display: flex;
 		flex: 1;
 		transition: $transition-default;
-		background-image: url('../images/banner.jpg');
 		background-position: center;
+		&.lazy-bg-loaded {
+			background: url('../images/banner.jpg');
+		}
 		.container {
 			display: flex;
 			flex-direction: column;

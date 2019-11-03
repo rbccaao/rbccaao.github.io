@@ -12,15 +12,14 @@ body {
 		position: absolute;
 		font-size: 60px;
 		font-weight: 200;
-		top: -25px;
 	}
 	&::before {
 		content: open-quote;
-		left: -25px;
+		transform: translate(-50px, -25%);
 	}
 	&::after {
 		content: close-quote;
-		right: -25px;
+		transform: translate(25px, -25%);
 	}
 }
 
@@ -89,11 +88,11 @@ a.external-link i {
 section {
 	position: relative;
 	&:nth-child(odd) {
-		background-color: $white;
+		background: $white;
 	}
 	
 	&:nth-child(even) {
-		background-color: $light-grey;
+		background: $light-grey;
 	}
 
 	.container {
