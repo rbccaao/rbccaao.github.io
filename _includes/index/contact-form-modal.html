@@ -1,0 +1,42 @@
+<div class="modal fade" id="contact-form-modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content text-left">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    Let's get in touch
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid p-0">
+                    <div class="row">
+                        <div class="col">
+                            <form id="contact-form" action="https://formspree.io/mnqayndn" method="POST">
+                                <div class="form-group row">
+                                    <div class="col-lg-5">
+                                        <label for="message" class="lead">Feel free to send a me message or simply leave a comment!</p>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <textarea class="form-control" id="message" name="message" rows="3" required data-bv-notempty-message="Please enter a message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-5">
+                                        <label for="_replyto">Please provide your email address if you'd like a response.</p>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <input name="email" id="_replyto" type="email" class="form-control" aria-describedby="emailHelp" data-bv-emailaddress-message="Please enter a valid email address" />
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary float-right">Submit</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

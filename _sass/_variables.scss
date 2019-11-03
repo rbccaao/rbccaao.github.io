@@ -7,6 +7,9 @@ $light-grey:                    #f6f6f6;
 $dark-grey:                     #252a2a;
 $off-black:                     #111111;
 
+$primary:                       $yellow;
+$secondary:                     $orange;
+
 $body-color:                    $dark-grey;
 $link-color:                    $brown;
 $link-hover-color:              $orange;
@@ -32,6 +35,7 @@ $lead-quote-font-size:          2rem;
 $lead-quote-margin-bottom:      $headings-margin-bottom;
 
 $section-padding:               3rem;
+$modal-content-border-color:    $white;
 $modal-inner-padding:           $spacing-lg;
 $modal-header-padding:          $spacing-lg;
 

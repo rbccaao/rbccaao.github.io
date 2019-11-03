@@ -12,7 +12,7 @@ header {
 		display: flex;
 		flex: 1;
 		transition: $transition-default;
-		background-position: center;
+		background-position: center !important;
 		&.lazy-bg-loaded {
 			background: url('../images/banner.jpg');
 		}

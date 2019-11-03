@@ -5,15 +5,15 @@
             <div class="col-lg-8 text-center">
                 <h2 class="sr-only">Get in touch</h2>
                 <p>
-                    <a href="mailto:rbccaao@gmail.com" class="link-deco-none alternate">
+                    <button type="button" class="btn btn-link link-deco-none link-alternate align-baseline p-0" data-toggle="modal" data-target="#contact-form-modal">
                         <i class="fas fa-3x fa-fw fa-envelope"></i>
-                        <span class="sr-only">Email rbccaao@gmail.com, opens in email client</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/rebecca-ao-10b8b373/" class="link-deco-none alternate" target="_blank">
+                        <span class="sr-only">Send me a message, opens form in a modal</span>
+                    </button>
+                    <a href="https://www.linkedin.com/in/rebecca-ao-10b8b373/" class="link-deco-none link-alternate" target="_blank">
                         <i class="fab fa-3x fa-fw fa-linkedin-in"></i>
                         <span class="sr-only">LinkedIn profile, opens in new window</span>
                     </a>
-                    <a href="https://github.com/rbccaao/" class="link-deco-none alternate" target="_blank">
+                    <a href="https://github.com/rbccaao/" class="link-deco-none link-alternate" target="_blank">
                         <i class="fab fa-3x fa-fw fa-github"></i>
                         <span class="sr-only">Github page, opens in new window</span>
                     </a>
@@ -21,6 +21,7 @@
                 <p class="mb-0">
                     <a href="https://github.com/rbccaao/rbccaao.github.io" target="_blank" class="external-link">View this site's source on Github</a>
                 </p>
+                {% include index/contact-form-modal.html %}
             </div>
         </div>
     </div>

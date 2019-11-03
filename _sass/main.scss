@@ -58,12 +58,6 @@ a {
 		color: $link-hover-color;
 		text-decoration: none;
 	}
-	&.alternate {
-		color: $yellow;
-		&:hover, &:focus, &.active {
-			color: $link-hover-color;
-		}
-	}
 }
 a.anchor {
 	display: block;
@@ -79,6 +73,12 @@ a.link-deco-none {
 }
 a.external-link i {
 	margin-left: 0.3em;
+}
+.link-alternate {
+	color: $yellow;
+	&:hover, &:focus, &.active {
+		color: $link-hover-color;
+	}
 }
 
 .fa-fw {
@@ -161,6 +161,15 @@ section {
 
 .modal {
 	line-height: $line-height-base * 0.75;
+}
+
+.form-group.has-error {
+	input, textarea {
+		border-color: $orange;
+	}
+}
+textarea {
+	resize: none;
 }
 
 .carousel {
