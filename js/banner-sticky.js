@@ -8,7 +8,7 @@ function resizeHeaderOnScroll() {
 		header.classList.add("sm", "sticky-top");
 	} else {
 		header.classList.remove("sm", "sticky-top");
-		window.scrollTo(0,0);
+		// window.scrollTo(0,0);
 	}
 }
 
