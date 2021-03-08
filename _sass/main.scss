@@ -81,6 +81,21 @@ a.external-link i {
 	}
 }
 
+#headshot:hover > #headshot-credits {
+	display: flex !important;
+}
+#headshot * {
+	height: 100%;
+	width: 100%;
+}
+#headshot-credits {
+	display: none;
+	top: 0;
+    overflow: hidden;
+	font-size: $font-size-sm;
+	@include transparent-bg($off-black);
+}
+
 .fa-fw {
 	width: 2em;
 }
