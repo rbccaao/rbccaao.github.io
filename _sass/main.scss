@@ -82,18 +82,19 @@ a.external-link i {
 }
 
 #headshot:hover > #headshot-credits {
-	display: flex !important;
+	opacity: 1;
 }
 #headshot * {
 	height: 100%;
 	width: 100%;
 }
 #headshot-credits {
-	display: none;
 	top: 0;
     overflow: hidden;
 	font-size: $font-size-sm;
 	@include transparent-bg($off-black);
+	transition: $transition-default;
+	opacity: 0;
 }
 
 .fa-fw {
