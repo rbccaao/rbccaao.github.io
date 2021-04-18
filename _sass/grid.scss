@@ -1,0 +1,52 @@
+.grid-container {
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-columns: 1fr 1fr 1fr;
+	
+	.card {
+		grid-area: auto / auto / span 1 / span 1;
+		* {
+			transition: $transition-default;
+		}
+		border: 1px solid $border-color;
+		&:hover, &:focus, &:active {
+			border: 1px solid $gray-300;
+
+			.card-img-wrapper {
+				filter: none;
+			}
+		}
+	}
+	.card.latest {
+		grid-area: auto / auto / span 2 / span 2;
+	}
+	.card.tall {
+		grid-area: auto / auto / span 2 / span 1;
+	}
+	.card.wide {
+		grid-area: auto / auto / span 1 / span 2;
+	}
+
+	.card-button {
+		display: flex;
+		flex-direction: column;
+		text-align: inherit;
+		height: 100%;
+		padding: 0;
+		border: 0;
+	}
+
+	.card-img-wrapper {
+		position: relative;
+		filter: opacity(80%);
+	}
+
+	.card-title {
+		font-size: $h5-font-size;
+	}
+
+	.card-date {
+		display: inline-block;
+		float: right;
+	}
+}

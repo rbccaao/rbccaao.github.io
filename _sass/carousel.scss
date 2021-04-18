@@ -1,0 +1,44 @@
+.carousel {
+	.row > * {
+		padding: $grid-gutter-width;
+	}
+
+	.carousel-item img {
+		height: 70vh;
+		object-fit: contain;
+		object-position: top;
+	}
+}
+
+.carousel-indicators {
+	position: relative;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0;
+	li {
+		position: relative;
+		width: 33%;
+		height: auto;
+		text-indent: 0;
+		border: 1px solid transparent;
+		&::after {
+			content: "";
+			display: block;
+			padding-bottom: 100%;
+		}
+		&.active {
+			border-color: $border-color;
+		}
+		img {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			object-position: top;
+		}
+	}
+}
