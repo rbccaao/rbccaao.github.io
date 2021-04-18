@@ -1,4 +1,4 @@
-header {
+header#header-main {
 	display: flex;
 	flex-direction: column;
 	height: $banner-height;
@@ -91,7 +91,7 @@ header {
 }
 
 @include media-breakpoint-down(md) {
-	header {
+	header#header-main {
 		height: $banner-height-md;
 		min-height: 20rem;
 		section {

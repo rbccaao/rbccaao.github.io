@@ -1,0 +1,59 @@
+body#simple {
+	div#content {
+		background: url('../images/banner.jpg');
+		&::before {
+			content: ' ';
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0.6;
+			background-image: linear-gradient(to bottom right,  $black 0%, $dark-grey 50%, $black 100%);
+		}
+	}
+	
+	section {
+        text-align: center;
+		background-color: $black !important;
+        padding: $spacing-lg;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba($black, 0.2);
+	}
+
+	.square-grid {
+		background-color: $black;
+		margin-top: -$grid-gutter-width / 2;
+		margin-bottom: -$grid-gutter-width / 2;
+		& > div {
+			padding-top: $grid-gutter-width / 2;
+			padding-bottom: $grid-gutter-width / 2;
+		}
+		.card {
+			border: none;
+		}
+	}
+	.square {
+		padding-bottom: 100%;
+		background: none;
+	}
+	.square-content {
+		display: flex;
+		position: absolute;
+		height: 80%;
+		width: 80%;
+		margin: 10%;
+		background-color: $white;
+		a {
+			color: $orange;
+			&:hover, &:focus, &.active {
+				color: $brown;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.icon-portfolio {
+		width: 5rem;
+	}
+}

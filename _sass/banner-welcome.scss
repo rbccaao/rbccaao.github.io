@@ -1,0 +1,18 @@
+header#header-welcome {
+	background-color: $nav-bg;
+    margin-bottom: $spacing-lg;
+
+	section {
+        color: $banner-color;
+        padding: $spacing-lg;
+		h1 {
+			font-family: $banner-heading-font-family;
+			font-size: $banner-heading-font-size;
+		}
+		p {
+			font-family: $banner-sub-font-family;
+			font-size: $banner-sub-font-size;
+			line-height: 1.5;
+		}
+	}
+}

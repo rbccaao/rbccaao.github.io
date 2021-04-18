@@ -1,0 +1,27 @@
+.flipbox {
+    background-color: black;
+    transition: transform $transition-default;
+    transform-style: preserve-3d;
+    &.unflipped {
+        .flip-front {
+            transform: rotateY(0deg);
+        }
+        .flip-back {
+            display: none;
+        }
+    }
+    &.flipped {
+        transform: rotateY(180deg);
+        .flip-front {
+            display: none;
+            
+        }
+        .flip-back {
+            transform: rotateY(180deg);
+        }
+    }
+}
+.flipbox>* {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}

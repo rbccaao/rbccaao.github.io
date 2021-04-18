@@ -1,3 +1,7 @@
+html, body, div#content {
+    height: 100%;
+}
+
 body {
 	position: relative;
 }
@@ -52,7 +56,7 @@ ul, ol {
 
 a {
 	color: $link-color;
-	transition: $transition-default;
+	transition: $transition-fast;
 	text-decoration: underline;
 	&:hover, &:focus, &.active {
 		color: $link-hover-color;
