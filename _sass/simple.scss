@@ -48,12 +48,20 @@ body#simple {
 			color: $orange;
 			&:hover, &:focus, &.active {
 				color: $brown;
-				text-decoration: none;
 			}
 		}
 	}
 
 	.icon-portfolio {
-		width: 5rem;
+		height: 4.5rem;
+		width: 4.5rem;
+		path {
+			transition: $transition-default;
+		}
+		&:hover, &:focus, &.active {
+			path {
+				fill: $brown !important;
+			}
+		}
 	}
 }
