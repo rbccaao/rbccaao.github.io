@@ -1,6 +1,5 @@
 function resizeHeaderOnScroll() {
 	const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-	documentHeaders = document.getElementsByTagName('header');
 	header = document.getElementById("header-main");
 	breakpoint = header.offsetHeight * 0.45;
 
