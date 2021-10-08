@@ -1,10 +1,12 @@
 var card = document.querySelector('.flipbox');
-card.addEventListener( 'click', function() {
-  if (card.classList.contains('unflipped')) {
+var buttonFront = document.querySelector('.flipboxbuttonfront');
+var buttonBack = document.querySelector('.flipboxbuttonback');
+buttonFront.addEventListener('click', function() {
     card.classList.add('flipped');
     card.classList.remove('unflipped')
-  } else {
-    card.classList.add('unflipped');
-    card.classList.remove('flipped')
-  }
 });
+buttonBack.addEventListener('click', function() {
+  card.classList.add('unflipped');
+  card.classList.remove('flipped')
+}
+);

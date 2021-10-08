@@ -29,12 +29,6 @@ body#simple {
 
 	.square-grid {
 		background-color: $black;
-		margin-top: -$grid-gutter-width / 2;
-		margin-bottom: -$grid-gutter-width / 2;
-		& > div {
-			padding-top: $grid-gutter-width / 2;
-			padding-bottom: $grid-gutter-width / 2;
-		}
 		.card {
 			border: none;
 		}
@@ -46,9 +40,6 @@ body#simple {
 	.square-content {
 		display: flex;
 		position: absolute;
-		height: 80%;
-		width: 80%;
-		margin: 10%;
 		background-color: $white;
 		a {
 			color: $orange;
@@ -56,6 +47,16 @@ body#simple {
 				color: $brown;
 			}
 		}
+	}
+	.flip-front .square-content {
+		height: 80%;
+		width: 80%;
+		margin: 10%;
+	}
+	.flip-back .square-content {
+		height: 90%;
+		width: 90%;
+		margin: 5%;
 	}
 
 	.icon-portfolio {
@@ -68,6 +69,18 @@ body#simple {
 			path {
 				fill: $brown !important;
 			}
+		}
+	}
+
+	#qr-code {
+		background-image: url("../../images/qr.png");
+		background-size: contain;
+		transition: $transition-default;
+		height: 90%;
+		width: 90%;
+		margin: 5%;
+		&:hover, &:focus, &.active {
+			background-image: url("../../images/qr-hover.png");
 		}
 	}
 }

@@ -25,3 +25,10 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
+
+button[class*="flipboxbutton"] {
+    transition: $transition-default;
+    &:hover, &:focus, &.active {
+        transform: rotateY(180deg);
+    }
+}
