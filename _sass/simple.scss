@@ -1,19 +1,23 @@
 body#simple {
-	height: 100%;	
-	div#content {
+	background: url('../images/welcome.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	&::before {
+		content: ' ';
+		display: block;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
 		height: 100%;
-		background: url('../images/banner.jpg');
-		&::before {
-			content: ' ';
-			display: block;
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			opacity: 0.6;
-			background-image: linear-gradient(to bottom right,  $black 0%, $dark-grey 50%, $black 100%);
-		}
+		opacity: 0.2;
+		background-image: linear-gradient(to bottom right,  $black 0%, $dark-grey 50%, $light-grey 100%);
+	}
+
+	div#content {
+		min-height: 100%;
+		padding: $section-padding;
 	}
 	
 	section {

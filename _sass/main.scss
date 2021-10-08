@@ -1,17 +1,9 @@
 html, body {
-	padding: 0;
-	margin: 0;
-}
-html {
-	height: 100%;
-}
-body {
-	min-height: 100%;
-	position: relative;
+    margin: 0;
+    height: 100%;
 }
 
 .lead.quote {
-
 	font-family: $lead-quote-font-family;
 	font-size: $lead-quote-font-size;
 	font-weight: 400;
