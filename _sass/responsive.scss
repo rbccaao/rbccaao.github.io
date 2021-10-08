@@ -10,12 +10,6 @@
 	html {
 		// font-size: $font-size-sm;
 	}
-	.lead.quote {
-		text-align: left;
-		&::before, &::after {
-			content: none;
-		}
-	}
 	.grid-container {
 		grid-template-columns: auto;
 		> div {
