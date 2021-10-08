@@ -32,7 +32,6 @@ $headings-margin-bottom:        $spacing-lg;
 $line-height-base:              2;
 $lead-quote-font-family:        'Crimson Pro', serif;
 $lead-quote-font-size:          2rem;
-$lead-quote-margin-bottom:      $headings-margin-bottom;
 
 $section-padding:               3rem;
 $modal-content-border-color:    $white;
@@ -44,6 +43,8 @@ $banner-height-md:              $banner-height / 2;
 $banner-height-sm:              $banner-height / 4;
 
 $card-border-radius:            0;
+
+$styled-border-spacing:         2rem;
 
 $transition-slow:		        0.5s ease-in-out;
 $transition-default:		    0.2s ease-in-out;
