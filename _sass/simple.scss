@@ -83,4 +83,13 @@ body#simple {
 			background-image: url("../../images/qr-hover.png");
 		}
 	}
+
+	.sub-text {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: $spacing-md;
+		transition: $transition-default;
+		color: $link-color;
+	}
 }
