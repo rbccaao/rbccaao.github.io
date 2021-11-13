@@ -1,6 +1,9 @@
 html, body {
     margin: 0;
-    height: 100%;
+}
+
+html {
+	height: 100%;
 }
 
 .lead.quote {
@@ -83,9 +86,9 @@ a.external-link i {
 	margin-left: 0.3em;
 }
 .link-alternate {
-	color: $yellow;
+	color: $orange;
 	&:hover, &:focus, &.active {
-		color: $link-hover-color;
+		color: $brown;
 	}
 }
 

@@ -3,6 +3,7 @@ body#simple {
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
+    height: 100%;
 	&::before {
 		content: ' ';
 		display: block;

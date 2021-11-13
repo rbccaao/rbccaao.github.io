@@ -32,3 +32,10 @@ button[class*="flipboxbutton"] {
         transform: rotateY(180deg);
     }
 }
+
+.flipboxbuttonback {
+    transform: rotateY(180deg);
+    &:hover, &:focus, &.active {
+        transform: rotateY(0deg) !important;
+    }
+}
