@@ -3,14 +3,12 @@
         <img class="card-img-top" src="../../images/projects/{{ include.name }}-main.png" alt="{{ include.name }} screenshot">
     </div>
     <div class="card-body align-self-stretch">
-        <h3 class="card-title">{{ include.title }}
-            <p class="card-text card-date"><small class="text-muted align-middle">{{ include.date }}</small></p>
-        </h3>
+        <h3 class="card-title">{{ include.title }}</h3>
         <p class="card-text">{{ include.description }}</p>
     </div>
 </button>
 <div class="modal fade" id="{{ include.name }}-modal" tabindex="-1" role="dialog" aria-labelledby="{{ include.name }}-title" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-xl-down" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="{{ include.name }}-title">
@@ -32,7 +30,7 @@
                         <div class="col-lg-6 d-flex flex-column">
                             {{ include.body }}
                             <h5>Roles</h5>
-                            <ul class="list-inline mb-0">{{ include.roles }}</ul>
+                            <ul class="list-inline">{{ include.roles }}</ul>
                             <h5 class="text-right">Skills</h5>
                             <ul class="text-right list-inline">{{ include.skills }}</ul>
                             <ol id="{{ include.name }}-indicators" class="carousel-indicators mt-auto border-0">

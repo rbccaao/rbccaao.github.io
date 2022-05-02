@@ -3,7 +3,22 @@
 		// font-size: $font-size-sm;
 	}
 	.grid-container {
-		grid-template-columns: auto auto;
+		grid-template-columns: 1fr 1fr;
+		.card {
+			grid-row-end: span 1 !important;
+		}
+		.card-img-wrapper {
+			max-height: 200px !important;
+		}
+	}
+	ul.list-grid, ol.list-grid {
+		grid-template-columns: auto auto auto;
+	}
+	.modal {
+		padding-left: 17px;
+		.modal-dialog {
+			max-width: none;
+		}
 	}
 }
 @include media-breakpoint-down(sm) { 
@@ -24,17 +39,10 @@
 			grid-area: auto / auto / auto / auto !important;
 		}
 	}
-	[class*="list-column-"] {
-		columns: 1;
+	ul.list-grid, ol.list-grid {
+		grid-template-columns: auto auto;
 	}
-	.list-inline-item {
-		display: block;
-		margin: 0 !important;
-		&:not(:last-child):after {
-			content: "";
-		}
-	}
-	.carousel-item img {
+	.carousel .carousel-item img {
 		height: auto;
 	}
 }
