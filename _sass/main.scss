@@ -10,53 +10,37 @@ html {
 	font-family: $lead-quote-font-family;
 	font-size: $lead-quote-font-size;
 	font-weight: 400;
-	padding-left: $styled-border-spacing * 1.5;
 	margin-bottom: $headings-margin-bottom;
 	text-align: justify;
 	border-width: 0;
-    border-left: 1px;
-    border-style: solid;
-    border-color: #ffd700;
-
-	&::before, &::after {
-		position: absolute;
-		font-size: 60px;
-		font-weight: 200;
-	}
-	&::before {
-		content: open-quote;
-		transform: translate(-$styled-border-spacing, -25%);
-	}
-	&::after {
-		content: close-quote;
-		transform: translate($styled-border-spacing/2, -25%);
-	}
 }
 
-ul, ol {
+ul.list-grid, ol.list-grid {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	grid-gap: $spacing-md / 2;
 	list-style-type: none;
 	padding: 0 $styled-border-spacing;
 	margin-left: 0;
 	margin-right: 0;
-	@include border('left');
-	.text-right &, &.text-right {
-		@include border('right');
-	}
-}
-.list-column-3 {
-	columns: 3;
-}
-.list-column-2 {
-	columns: 2;
+	margin-bottom: 1rem;
 }
 
-.list-inline {
+ul.list-inline, ol.list-inline {
 	padding: 0 2rem;
 	li {
 		@extend .list-inline-item;
 		&:not(:last-child):after {
 			content: ", ";
 		}
+	}
+}
+
+ul.list-grid, ol.list-grid,
+ul.list-inline, ol.list-inline {
+	@include border('left');
+	.text-right &, &.text-right {
+		@include border('right');
 	}
 }
 
