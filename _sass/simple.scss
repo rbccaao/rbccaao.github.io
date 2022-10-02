@@ -77,14 +77,14 @@ body#simple {
 	}
 
 	#qr-code {
-		background-image: url("../../images/qr.png");
+		background-image: url("/images/qr.png");
 		background-size: contain;
 		transition: $transition-default;
 		height: 90%;
 		width: 90%;
 		margin: 5%;
 		&:hover, &:focus, &.active {
-			background-image: url("../../images/qr-hover.png");
+			background-image: url("/images/qr-hover.png");
 		}
 	}
 
@@ -92,7 +92,7 @@ body#simple {
 		position: absolute;
 		left: 0;
 		right: 0;
-		bottom: $spacing-md;
+		bottom: $spacing-md * 0.5;
 		transition: $transition-default;
 		color: $link-color;
 	}
