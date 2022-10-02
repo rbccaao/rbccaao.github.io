@@ -14,7 +14,7 @@ header#header-main {
 		transition: $transition-default;
 		background-position: center !important;
 		&.lazy-bg-loaded {
-			background: url('../images/banner.jpg');
+			background: url('/images/banner.jpg');
 		}
 		.container {
 			display: flex;
