@@ -7,143 +7,83 @@
             </div>
         </div>
         <div class="grid-container" data-aos="fade-up">
-            <div class="card wide" data-aos="fade-up" data-aos-delay="50">
-                {% include index/projects-button-modal.html
-                    name="modelling"
-                    title="3D Modelling"
-                    description="Baking up a donut in Blender!"
-                    date="2021-2022"
-                    roles="<li>3D modeller</li>"
-                    skills="<li>Blender</li><li>3D modelling</li>"
-                    body="<p>Sometimes a break is needed, and by that I mean treating yourself to a donut. I thought I'd learn something completely out of my own expertise for once.</p>
-                    <p>Currently following the Donut Blender Tutorial series on Youtube. One day I'll finish the scene!</p>"
-                %}
+            {% for project in site.data.projects %}
+            {% assign project_index = forloop %}
+            {% assign grid = site.data.projects_grid %}
+            <div class="card {{ grid[forloop.index0][0] }}" data-aos="fade-up" data-aos-delay="{{ grid[forloop.index0][1] }}">
+                <button type="button" class="card-button btn" data-toggle="modal" data-target="#{{ project.name }}-modal">
+                    <div class="card-img-wrapper">
+                        <img class="card-img-top" src="/images/projects/{{ project.thumbnail }}" alt="{{ project.name }} screenshot">
+                    </div>
+                    <div class="card-body align-self-stretch">
+                        <h3 class="card-title">{{ project.title }}</h3>
+                        <p class="card-text">{{ project.description }}</p>
+                    </div>
+                </button>
+                <div class="modal fade" id="{{ project.name }}-modal" tabindex="-1" role="dialog" aria-labelledby="{{ project.name }}-title" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-xl-down" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="{{ project.name }}-title">
+                                    {{ project.title }}
+                                    <small class="text-muted align-middle">{{ project.date }}</small>
+                                </h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid p-0">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="lead">{{ project.description }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 d-flex flex-column">
+                                            {{ project.content }}
+                                            <h5>Roles</h5>
+                                            <ul class="list-inline">
+                                                {% for roles in project.roles %}
+                                                <li>{{ roles }}</li>
+                                                {% endfor %}
+                                            </ul>
+                                            </ul>
+                                            <h5 class="text-right">Skills</h5>
+                                            <ul class="text-right list-inline">
+                                                {% for skills in project.skills %}
+                                                <li>{{ skills }}</li>
+                                                {% endfor %}
+                                            </ul>
+                                            <ol id="{{ project.name }}-indicators" class="carousel-indicators mt-auto border-0">
+                                                {% for media in project.media %}
+                                                <li data-target="#{{ project.name }}-carousel" data-slide-to="{{ forloop.index0 }}" class="active">
+                                                    <img src="/images/projects/{{ media }}" alt="{{ project.name }} screenshot thumbnail {{ forloop.index0 }}">
+                                                </li>
+                                                {% endfor %}
+                                            </ol>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div id="{{ project.name }}-carousel" class="carousel slide">
+                                                <div class="carousel-inner">
+                                                    {% for media in project.media %}
+                                                    <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                                                        <a href="/images/projects/{{ media }}" target="_blank">
+                                                            <img src="/images/projects/{{ media }}" class="d-block w-100" alt="{{ project.name }} screenshot {{ forloop.index0 }}">
+                                                        </a>
+                                                    </div>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="100">
-                {% include index/projects-button-modal.html
-                    name="timetable-ticker"
-                    title="Timetable Ticker 日課ティッカー"
-                    description="Web developer for a personal project, now used by the staff at my workplace."
-                    date="2021"
-                    roles="<li>Web developer</li><li>idea generator</li>"
-                    skills="<li>HTML</li><li>CSS</li><li>Javscript</li><li>Bootstrap 5 library</li>"
-                    body="<p>The school year had been heavily impacted by the COVID-19 global pandemic. For the school I am working at, this meant that the timetable schedule changed multiple times across several months. My staff room buddy and I grumbled about the daily issue of constantly recalculating what school period we were in, and thus the idea was born.</p>
-                    <p>This started off as a one day hackathon. The first prototype showed the schedule for the day, highlighted what period it currently is, and had options to change the lengths of periods and breaks.</p>
-                    <p>The following week was spent setting up the hosting and making design tweaks so that other staff members could access the site on any device (mainly the school-provided iPads), integrating extra functionalities, and adding Japanese language support.</p>
-                    <p>View the site here on <a href='https://rbccaao.github.io/timetable-ticker/' class='external-link' target='_blank'>GitHub Pages</a></p>"
-                %}
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="100">
-                {% include index/projects-button-modal.html
-                    name="toki-bgm"
-                    title="Toki BGM"
-                    description="Android app developer for a simple music player which plays different music based on the weather and time of day"
-                    date="2020"
-                    roles="<li>App developer</li><li>idea generator</li>"
-                    skills="<li>Kotlin</li><li>Java</li><li>Android application development</li><li>SQL</li><li>XML</li>"
-                    body="<p>Whilst working on my monthly hackathon, I would listen to various BGM music on repeat. Much like one would when playing a video game. However, my monthly hackathons are timed and it was difficult to tell how much time had passed with unchanging background music.</p>
-                    <p>Thus, I came up with the idea of making an Android app to do play set music depending on the time and the weather outside. The concept is heavily inspired by the Animal Crossing video games.</p>
-                    <p>View the source code here on <a href='https://github.com/rbccaao/TokiBGM' class='external-link' target='_blank'>Github</a>. WIP, has a few bugs and incomplete.</p>"
-                %}
-            </div>
-            <div class="card wide" data-aos="fade-up" data-aos-delay="150">
-                {% include index/projects-button-modal.html
-                    name="benchmark"
-                    title="Benchmark Insights website"
-                    description="Front-end web developer and content publisher for the new Benchmark Insights website."
-                    date="2019"
-                    roles="<li>Front-end web developer</li><li>Content publisher</li>"
-                    skills="<li>HTML</li><li>CSS</li><li>Sass</li><li>Bootstrap 4 library</li><li>Content publishing</li>"
-                    body="<p>The Benchmark Insights website is a newly created website to replace the former physically printed magazine. The design emulates the aesthetics and appearance of a magazine, which works on both desktop and mobile platforms. The integrated metadata functionalities improves the reader's experience with filter options and sorting by different authors.</p>
-                    <p>As with the other recent site changes, the Benchmark Insights website utilises Bootstrap 4, along with responsive web views and AA-level accessibility.</p>
-                    <p>Utilised Bootstrap 4 library and Sass.</p>"
-                %}
-            </div>
-            <div class="card wide" data-aos="fade-up" data-aos-delay="50">
-                {% include index/projects-button-modal.html
-                    name="pic"
-                    title="Private Investment Consulting site migration"
-                    description="Front-end web developer and content migrationer for the uplifted Private Investment Consulting website."
-                    date="2019"
-                    roles="<li>Front-end web developer</li><li>Content migrater</li>"
-                    skills="<li>HTML</li><li>CSS</li><li>Sass</li><li>Bootstrap 4 library</li><li>Content publishing</li>"
-                    body="<p>The Private Investment Consulting (PIC) website was previously hosted on two separate platforms; AEM for the pre-login pages, and OpenText for the secure pages. As part of the OpenText decommission project, PIC’s secure site has been migrated to AEM along with removing no longer needed content, making it easier for users to find their needs.</p>
-                    <p>Similar to the MLC Adviser Online site migration project, this opportunity allowed us to upgrade the front-end design to Bootstrap 4, along with responsive web views, AA-level accessibility, and an overall better experience for all users.</p>
-                    <p>Utilised Bootstrap 4 library and Sass.</p>"
-                %}
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="100">
-                {% include index/projects-button-modal.html
-                    name="mlc-adviser-online"
-                    title="MLC Adviser Online site migration"
-                    description="Content migration and front-end design uplift of the MLC Adviser Online website."
-                    date="2018"
-                    roles="<li>Front-end web developer</li><li>Content migrater</li>"
-                    skills="<li>HTML</li><li>CSS</li><li>Sass</li><li>Bootstrap 4 library</li><li>Content publishing</li>"
-                    body="<p>Previously hosted on OpenText, the MLC Adviser Online website has been migrated to the current AEM platform. This involved the migration, verification, and optimization of over 500 content pages and documents.</p>
-                    <p>The site migration also allowed for the opportunity to uplift the front-end design to match the current styles of the MLC websites as well as integration of responsive web views, AA-level accessibility, and an overall better experience for all users.</p>
-                    <p>Utilised Bootstrap 4 library and Sass.</p>"
-                %}
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="50">
-                {% include index/projects-button-modal.html
-                    name="mlc-welcome-emails"
-                    title="MLC welcome emails uplift"
-                    description="Front-end web developer of the rebranded uplift of MLC’s external customer emails."
-                    date="2017"
-                    roles="<li>Front-end web developer</li><li>HTML email template developer</li>"
-                    skills="<li>HTML</li><li>CSS</li>"
-                    body="<p>MLC’s welcome customer emails were part of the Seamless Start-up initiative to uplift the email communications when onboarding new customers.</p>
-                    <p>HTML templates were re-written with more understandable messages and the new design offers a greater consistency between MLC’s website and digital communications with the customers.</p>"
-                %}
-            </div>
-            <div class="card wide" data-aos="fade-up" data-aos-delay="100">
-                {% include index/projects-button-modal.html
-                    name="mlc-direct-super-pension"
-                    title="MLC Direct Super and Pension application forms "
-                    description="Front-end web developer of the newly created Direct Super and Pension application forms for the MLC website."
-                    date="2016/2017"
-                    roles="<li>Front-end web developer</li><li>Content migrater</li>"
-                    skills="<li>Content publishing</li><li>Bootstrap 3 library</li><li>CSS</li><li>LESS</li>"
-                    body="<p>The Direct Super and Pension application forms were created as part of the Seamless-Start-up initiative to onboard new MLC customers. Driven by usability, the forms are one of the first newly designed single page application forms which included responsive web views and accessibility standards.</p>
-                    <p>Utilised Bootstrap 3 library and LESS.</p>"
-                %}
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="50">
-                {% include index/projects-button-modal.html
-                    name="expenditure-app"
-                    title="Expenditure Tracker Android application"
-                    description="A solo project created for the UTS 31285 Mobile Applications Development subject."
-                    date="2015"
-                    roles="<li>Developer</li>"
-                    skills="<li>Kotlin</li><li>Android application development</li><li>Java</li><li>SQL</li><li>XML</li>"
-                    body="<p>This application was created to help the user keep track of their money habits on a regular basis. The main functionalities of this application are adding a record for a spending or income transaction and viewing the history/trends of transactions. Some of its other features include viewing money trends based on transactions, and storing images of receipts from spending.</p>
-                    <p>Created with Android Studio.</p><p>View the source code here on <a href='https://bitbucket.org/rebeccaao/expenditure-tracker/src/master/' class='external-link' target='_blank'>Bitbucket</a></p>"
-                %}
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="100">
-                {% include index/projects-button-modal.html
-                    name="scribble-jumper"
-                    title="Scribble Jumper digital game"
-                    description="A group project created for the UTS 31262 Introduction to Game Design subject."
-                    date="2015"
-                    roles="<li>Initial game idea creator, designer, artist, tester, documenter</li>"
-                    skills="<li>Photoshop</li>"
-                    body="<p>Scribble Jumper was group project final assignment for the Introduction to Game Design subject. The aim of this platformer game was to reach the goal by using ink to avoid and overcome obstacles. </p><p>Within the group of 5 members, I was dedicated to overseeing the development of the game and was assigned to do all the documentation related tasks (interview scripting, journaling, final documentation), as well as create in-game assets, test, and provide feedback. </p>
-                    <p>The game won an honorable mention for the semester.</p><p>View the demo here on <a href='https://www.youtube.com/watch?v=R_WzBCXppcE&' class='external-link' target='_blank'>Youtube</a></p>"
-                %}
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="150">
-                {% include index/projects-button-modal.html
-                    name="sep"
-                    title="UTS Student Activities Organiser System"
-                    description="A group project created for the UTS 48440 Software Engineering Practice subject."
-                    date="2015"
-                    roles="<li>Project manager, UX/UI designer, HTML page template creator</li>"
-                    skills="<li>Bootstrap 3 library</li>"
-                    body="<p>The UTS Student Activities Organiser Systsem was created as a web service for UTS students to view, create, manage, and join activites hosted by other students. </p><p>The system used Spring MVC and Data Access Object Pattern to host the site. My role as the Project Manager was to oversee the team, and to provide the UX/UI overflow and design, as well as provide input to the final document.</p>"
-                %}
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>

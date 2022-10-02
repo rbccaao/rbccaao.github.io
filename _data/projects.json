@@ -1,0 +1,168 @@
+[
+    {
+        "name": "modelling",
+        "title": "3D baking",
+        "description": "Baking up a donut in Blender!",
+        "date": "2021-2022",
+        "roles": ["3D modeller", "pooper"],
+        "skills": ["Blender", "3d modelling"],
+        "content": "<p>Sometimes a break is needed, and by that I mean treating yourself to a donut. I thought I'd learn something completely out of my own expertise for once.</p><p>Currently following the Donut Blender Tutorial series on Youtube. One day I'll finish the scene!</p>",
+        "thumbnail": "modelling-main.png",
+        "media": [
+            "modelling-1.png",
+            "modelling-2.png",
+            "modelling-3.png"
+        ]
+    },
+    {
+        "name": "timetable-ticker",
+        "title": "Timetable Ticker 日課ティッカー",
+        "description": "Web developer for a personal project, now used by the staff at my workplace.",
+        "date": "2021",
+        "roles": ["Web developer", "idea generator"],
+        "skills": ["HTML", "CSS", "Javscript", "Bootstrap 5 library"],
+        "content": "<p>The school year had been heavily impacted by the COVID-19 global pandemic. For the school I am working at, this meant that the timetable schedule changed multiple times across several months. My staff room buddy and I grumbled about the daily issue of constantly recalculating what school period we were in, and thus the idea was born.</p><p>This started off as a one day hackathon. The first prototype showed the schedule for the day, highlighted what period it currently is, and had options to change the lengths of periods and breaks.</p><p>The following week was spent setting up the hosting and making design tweaks so that other staff members could access the site on any device (mainly the school-provided iPads), integrating extra functionalities, and adding Japanese language support.</p><p>View the site here on <a href='https://rbccaao.github.io/timetable-ticker/' class='external-link' target='_blank'>GitHub Pages</a></p>",
+        "thumbnail": "timetable-ticker-main.png",
+        "media": [
+            "timetable-ticker-1.png",
+            "timetable-ticker-2.png",
+            "timetable-ticker-3.png"
+        ]
+    },
+    {
+        "name": "toki-bgm",
+        "title": "Toki BGM",
+        "description": "Android app developer for a simple music player which plays different music based on the weather and time of day",
+        "date": "2020",
+        "roles": ["App developer", "idea generator"],
+        "skills": ["Kotlin", "Java", "Android application development", "SQL", "XML"],
+        "content": "<p>Whilst working on my monthly hackathon, I would listen to various BGM music on repeat. Much like one would when playing a video game. However, my monthly hackathons are timed and it was difficult to tell how much time had passed with unchanging background music.</p><p>Thus, I came up with the idea of making an Android app to do play set music depending on the time and the weather outside. The concept is heavily inspired by the Animal Crossing video games.</p><p>View the source code here on <a href: 'https://github.com/rbccaao/TokiBGM' class: 'external-link' target: '_blank'>Github</a>. WIP, has a few bugs and incomplete.</p>",
+        "thumbnail": "toki-bgm-main.png",
+        "media": [
+            "toki-bgm-1.png",
+            "toki-bgm-2.png",
+            "toki-bgm-3.png"
+        ]
+    },
+    {
+        "name": "benchmark",
+        "title": "Benchmark Insights website",
+        "description": "Front-end web developer and content publisher for the new Benchmark Insights website.",
+        "date": "2019",
+        "roles": ["Front-end web developer", "Content publisher"],
+        "skills": ["HTML", "CSS", "Sass", "Bootstrap 4 library", "Content publishing"],
+        "content": "<p>The Benchmark Insights website is a newly created website to replace the former physically printed magazine. The design emulates the aesthetics and appearance of a magazine, which works on both desktop and mobile platforms. The integrated metadata functionalities improves the reader's experience with filter options and sorting by different authors.</p><p>As with the other recent site changes, the Benchmark Insights website utilises Bootstrap 4, along with responsive web views and AA-level accessibility.</p><p>Utilised Bootstrap 4 library and Sass.</p>",
+        "thumbnail": "benchmark-main.png",
+        "media": [
+            "benchmark-1.png",
+            "benchmark-2.png",
+            "benchmark-3.png"
+        ]
+    },
+    {
+        "name": "pic",
+        "title": "Private Investment Consulting site migration",
+        "description": "Front-end web developer and content migrationer for the uplifted Private Investment Consulting website.",
+        "date": "2019",
+        "roles": ["Front-end web developer", "Content migrater"],
+        "skills": ["HTML", "CSS", "Sass", "Bootstrap 4 library", "Content publishing"],
+        "content": "<p>The Private Investment Consulting (PIC) website was previously hosted on two separate platforms; AEM for the pre-login pages, and OpenText for the secure pages. As part of the OpenText decommission project, PIC’s secure site has been migrated to AEM along with removing no longer needed content, making it easier for users to find their needs.</p><p>Similar to the MLC Adviser Online site migration project, this opportunity allowed us to upgrade the front-end design to Bootstrap 4, along with responsive web views, AA-level accessibility, and an overall better experience for all users.</p><p>Utilised Bootstrap 4 library and Sass.</p>",
+        "thumbnail": "pic-main.png",
+        "media": [
+            "pic-1.png",
+            "pic-2.png",
+            "pic-3.png"
+        ]
+    }, 
+    {
+        "name": "mlc-adviser-online",
+        "title": "MLC Adviser Online site migration",
+        "description": "Content migration and front-end design uplift of the MLC Adviser Online website.",
+        "date": "2018",
+        "roles": ["Front-end web developer", "Content migrater"],
+        "skills": ["HTML", "CSS", "Sass", "Bootstrap 4 library", "Content publishing"],
+        "content": "<p>Previously hosted on OpenText, the MLC Adviser Online website has been migrated to the current AEM platform. This involved the migration, verification, and optimization of over 500 content pages and documents.</p><p>The site migration also allowed for the opportunity to uplift the front-end design to match the current styles of the MLC websites as well as integration of responsive web views, AA-level accessibility, and an overall better experience for all users.</p><p>Utilised Bootstrap 4 library and Sass.</p>",
+        "thumbnail": "mlc-adviser-online-main.png",
+        "media": [
+            "mlc-adviser-online-1.png",
+            "mlc-adviser-online-2.png",
+            "mlc-adviser-online-3.png"
+        ]
+    },
+    {
+        "name": "mlc-welcome-emails",
+        "title": "MLC welcome emails uplift",
+        "description": "Front-end web developer of the rebranded uplift of MLC’s external customer emails.",
+        "date": "2017",
+        "roles": ["Front-end web developer", "HTML email template developer"],
+        "skills": ["HTML", "CSS"],
+        "content": "<p>MLC’s welcome customer emails were part of the Seamless Start-up initiative to uplift the email communications when onboarding new customers.</p><p>HTML templates were re-written with more understandable messages and the new design offers a greater consistency between MLC’s website and digital communications with the customers.</p>",
+        "thumbnail": "mlc-welcome-emails-main.png",
+        "media": [
+            "mlc-welcome-emails-1.png",
+            "mlc-welcome-emails-2.png",
+            "mlc-welcome-emails-3.png"
+        ]
+    },
+    {
+        "name": "mlc-direct-super-pension",
+        "title": "MLC Direct Super and Pension application forms ",
+        "description": "Front-end web developer of the newly created Direct Super and Pension application forms for the MLC website.",
+        "date": "2016/2017",
+        "roles": ["Front-end web developer", "Content migrater"],
+        "skills": ["Content publishing", "Bootstrap 3 library", "CSS", "LESS"],
+        "content": "<p>The Direct Super and Pension application forms were created as part of the Seamless-Start-up initiative to onboard new MLC customers. Driven by usability, the forms are one of the first newly designed single page application forms which included responsive web views and accessibility standards.</p><p>Utilised Bootstrap 3 library and LESS.</p>",
+        "thumbnail": "mlc-direct-super-pension-main.png",
+        "media": [
+            "mlc-direct-super-pension-1.png",
+            "mlc-direct-super-pension-2.png",
+            "mlc-direct-super-pension-3.png"
+        ]
+    },
+    {
+        "name": "expenditure-app",
+        "title": "Expenditure Tracker Android application",
+        "description": "A solo project created for the UTS 31285 Mobile Applications Development subject.",
+        "date": "2015",
+        "roles": ["Developer"],
+        "skills": ["Kotlin", "Android application development", "Java", "SQL", "XML"],
+        "content": "<p>This application was created to help the user keep track of their money habits on a regular basis. The main functionalities of this application are adding a record for a spending or income transaction and viewing the history/trends of transactions. Some of its other features include viewing money trends based on transactions, and storing images of receipts from spending.</p><p>Created with Android Studio.</p><p>View the source code here on <a href: 'https://bitbucket.org/rebeccaao/expenditure-tracker/src/master/' class: 'external-link' target: '_blank'>Bitbucket</a></p>",
+        "thumbnail": "expenditure-app-main.png",
+        "media": [
+            "expenditure-app-1.png",
+            "expenditure-app-2.png",
+            "expenditure-app-3.png"
+        ]
+    },
+    {
+        "name": "scribble-jumper",
+        "title": "Scribble Jumper digital game",
+        "description": "A group project created for the UTS 31262 Introduction to Game Design subject.",
+        "date": "2015",
+        "roles": ["Initial game idea creator, designer, artist, tester, documenter"],
+        "skills": ["Photoshop"],
+        "content": "<p>Scribble Jumper was group project final assignment for the Introduction to Game Design subject. The aim of this platformer game was to reach the goal by using ink to avoid and overcome obstacles. </p><p>Within the group of 5 members, I was dedicated to overseeing the development of the game and was assigned to do all the documentation related tasks (interview scripting, journaling, final documentation), as well as create in-game assets, test, and provide feedback. </p><p>The game won an honorable mention for the semester.</p><p>View the demo here on <a href: 'https://www.youtube.com/watch?v: R_WzBCXppcE&' class: 'external-link' target: '_blank'>Youtube</a></p>",
+        "thumbnail": "scribble-jumper-main.png",
+        "media": [
+            "scribble-jumper-1.png",
+            "scribble-jumper-2.png",
+            "scribble-jumper-3.png"
+        ]
+    },
+    {
+        "name": "sep",
+        "title": "UTS Student Activities Organiser System",
+        "description": "A group project created for the UTS 48440 Software Engineering Practice subject.",
+        "date": "2015",
+        "roles": ["Project manager, UX/UI designer, HTML page template creator"],
+        "skills": ["Bootstrap 3 library"],
+        "content": "<p>The UTS Student Activities Organiser Systsem was created as a web service for UTS students to view, create, manage, and join activites hosted by other students. </p><p>The system used Spring MVC and Data Access Object Pattern to host the site. My role as the Project Manager was to oversee the team, and to provide the UX/UI overflow and design, as well as provide input to the final document.</p>",
+        "thumbnail": "sep-main.png",
+        "media": [
+            "sep-1.png",
+            "sep-2.png",
+            "sep-3.png"
+        ]
+    }
+]
+
