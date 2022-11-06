@@ -1,12 +1,12 @@
 [
     {
         "name": "modelling",
-        "title": "3D donut baking",
+        "title": "3D Donut Baking",
         "description": "A donut baked in Blender!",
         "date": "2021-2022",
         "roles": ["3D modeller"],
         "skills": ["Blender", "3d modelling"],
-        "content": "<p>Sometimes a break is needed, and by that I mean treating yourself to a donut. I thought I'd learn something completely out of my own expertise for once.</p><p>I followed Blender Guru's <a href='https://www.youtube.com/watch?v=NyJWoyVx_XI&list=PLjEaoINr3zgEq0u2MzVgAaHEBt--xLB6U' class='external-link' target='_blank'>Blender Beginner Tutorial Series</a> on Youtube and created a donut with pink frosting and sprinkles!</p>",
+        "content": "<p>Sometimes a break is needed, and by that I mean treating yourself to a donut with a hot cuppa tea. I thought I'd learn something completely out of my own expertise for once.</p><p>I followed Blender Guru's <a href='https://www.youtube.com/watch?v=NyJWoyVx_XI&list=PLjEaoINr3zgEq0u2MzVgAaHEBt--xLB6U' class='external-link' target='_blank'>Blender Beginner Tutorial Series</a> on Youtube and created a donut with pink frosting and sprinkles!</p>",
         "thumbnail": "modelling-main.png",
         "media": [
             "modelling-1.mp4",
