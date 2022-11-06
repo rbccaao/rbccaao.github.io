@@ -24,6 +24,7 @@
 			filter: opacity(60%);
 			max-height: 300px;
 			overflow: hidden;
+			width: 100%;
 			&:before {
 				content:"";
 				position: absolute;

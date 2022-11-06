@@ -3,10 +3,13 @@
 		padding: $grid-gutter-width;
 	}
 
-	.carousel-item img {
+	.carousel-item {
 		height: 70vh;
-		object-fit: contain;
-		object-position: top;
+		img {
+			height: 100%;
+			object-fit: contain;
+			object-position: top;
+		}
 	}
 }
 

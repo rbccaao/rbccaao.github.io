@@ -57,9 +57,15 @@
                                             </ul>
                                             <ol id="{{ project.name }}-indicators" class="carousel-indicators mt-auto border-0">
                                                 {% for media in project.media %}
-                                                <li data-target="#{{ project.name }}-carousel" data-slide-to="{{ forloop.index0 }}" class="active">
-                                                    <img src="/images/projects/{{ media }}" alt="{{ project.name }} screenshot thumbnail {{ forloop.index0 }}">
-                                                </li>
+                                                    {% if media contains "png" %}
+                                                    <li data-target="#{{ project.name }}-carousel" data-slide-to="{{ forloop.index0 }}" class="active">
+                                                        <img src="/images/projects/{{ media }}" alt="{{ project.name }} screenshot thumbnail {{ forloop.index0 }}">
+                                                    </li>
+                                                    {% elsif media contains "mp4" %}
+                                                    <li data-target="#{{ project.name }}-carousel" data-slide-to="{{ forloop.index0 }}" class="active">
+                                                        <img src="/images/projects/{{ media | split: '.' | slice: 0 }}-thumbnail.png" alt="{{ project.name }} screenshot thumbnail {{ forloop.index0 }}">
+                                                    </li>
+                                                    {% endif %}
                                                 {% endfor %}
                                             </ol>
                                         </div>
@@ -68,9 +74,15 @@
                                                 <div class="carousel-inner">
                                                     {% for media in project.media %}
                                                     <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                                                        {% if media contains "png" %}
                                                         <a href="/images/projects/{{ media }}" target="_blank">
                                                             <img src="/images/projects/{{ media }}" class="d-block w-100" alt="{{ project.name }} screenshot {{ forloop.index0 }}">
                                                         </a>
+                                                        {% elsif media contains "mp4" %}
+                                                        <video autoplay muted loop controls>
+                                                            <source src="/images/projects/{{ media }}" class="d-block w-100" type="video/mp4">
+                                                        </video>
+                                                        {% endif %}
                                                     </div>
                                                     {% endfor %}
                                                 </div>
@@ -87,4 +99,3 @@
         </div>
     </div>
 </section>
-
